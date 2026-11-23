@@ -5,7 +5,7 @@ description: 'Use quando pedirem SEO de YouTube, título, thumbnail, descrição
 
 # YouTube SEO e descoberta (long-form e Shorts), com evidência rotulada
 
-Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`).
+Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`. v2.2: estudo próprio com 17.882 vídeos, seção 17B e pasta `estudo-10k/`).
 
 ## Índice
 
@@ -27,6 +27,7 @@ Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTu
 15. Analytics (Insights) e diagnóstico de queda
 16. Experimentos: A/B de título e thumbnail, Video A/B, Dynamic Thumbnails
 17. Benchmarks de praticantes (rotulados)
+17B. Evidência do estudo próprio (17.882 vídeos, 203 canais) [ESTUDO-PRÓPRIO]
 18. Mitos e divergências
 19. Checklists: pré-publicação, 24h, 48h, 7/28/90 dias
 20. Template de entrega
@@ -49,6 +50,7 @@ Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTu
 | "Checklist de publicação" | 19 | Checklist preenchido |
 | "Dublar / outro idioma" | 13 | Plano de idiomas |
 | "Roteiro" / "gancho" / "retenção caiu no início" | 10, 7.4 | Estrutura de roteiro + 3 ganchos |
+| "O que funciona em título/thumb/descrição segundo dados?" | 17B, 7, 9 | Resposta com efeito e margem do estudo próprio |
 | "Qual CTR é bom?" | 15.2, 17, 18 (D4) | Resposta com faixa oficial + régua do próprio canal |
 
 Se o pedido mistura vários itens, entregue o template da seção 20 e marque os blocos não aplicáveis como "n/a".
@@ -65,6 +67,7 @@ Se o pedido mistura vários itens, entregue o template da seção 20 e marque os
 | [OFICIAL-LIAISON] | Rene Ritchie (Creator Liaison) no X (@YouTubeInsider) ou em vídeo | Quase oficial; é fala, não documentação |
 | [PAPER] | Papers técnicos de engenheiros do Google/YouTube (2010-2019) | Contexto; não descreve o sistema de hoje |
 | [PRATICANTE] | vidIQ, TubeBuddy, consultores (Paddy Galloway, Ed Lawrence), creators, imprensa, estudos de mercado, Reddit. Sempre dizer quem | Hipótese útil; testar |
+| [ESTUDO-PRÓPRIO] | Estudo observacional desta skill: 17.882 vídeos longos de 203 canais (nov/2026), comparando cada vídeo com o normal do próprio canal (seção 17B, pasta `estudo-10k/`) | Correlação, não causa; abaixo de [OFICIAL], acima de [PRATICANTE] sem dados |
 | [INFERÊNCIA] | Dedução a partir das fontes acima | Explicitar o raciocínio |
 
 ### 1.2 Regras
@@ -818,6 +821,59 @@ Não diagnostique com um vídeo só; separe formato x tema x distribuição. [PR
 | AVD média de mercado ~23,7% | Retention Rabbit via F105 | [PRATICANTE] sem método aberto |
 | "Até 300-400% extra views" com dublagem | Mario Joos F84 | [PRATICANTE], sem método (D6) |
 | "AVD < 40% = despriorizado" | F105 | Contradiz o oficial (D3); não usar |
+
+---
+
+## 17B. Evidência do estudo próprio [ESTUDO-PRÓPRIO]
+
+Estudo observacional feito para esta skill em 23/11/2026: **17.882 vídeos longos de 203 canais** (11 nichos, português e inglês, portes gigante/grande/médio), dados públicos da YouTube Data API v3. Cada vídeo foi comparado com a mediana dos 10 vídeos do mesmo canal publicados mais perto dele (views do vídeo ÷ normal do canal), com controle de idade, nicho, idioma, porte, categoria e hora. Modelo de efeitos mistos e versão conservadora dentro do canal com erro agrupado por canal; correção de Benjamini-Hochberg para 35 traços; estabilidade checada por nicho e idioma; validação fora da amostra por grupos de canais. Detalhes, gráficos, dados e scripts em `estudo-10k/` (RESULTADOS.md). Números abaixo: versão conservadora, intervalo de 95%.
+
+**Como usar:** é correlação, não causa. Use para priorizar o que testar (seção 16) e para desmontar mitos, nunca como promessa de resultado. Shorts não foram analisados.
+
+### 17B.1 O recado principal
+
+- Dentro de um mesmo canal, 18% dos vídeos fizeram mais que o dobro do normal e 15% menos da metade. Todos os 35 traços de metadados e miniatura juntos explicam **~1,5%** dessa variação em canais não vistos (R² fora da amostra 0,015). [ESTUDO-PRÓPRIO]
+- Tradução: metadados não salvam nem afundam um vídeo. Tema, ideia e satisfação de quem assiste pesam muito mais, o que bate com o oficial (seções 2 e 3). Gaste o esforço em ideia e pacote (seções 6 e 7), não em ajuste fino de descrição e tags.
+
+### 17B.2 Tabela de efeitos (vs normal do próprio canal)
+
+| Traço | Efeito médio | Margem (95%) | Leitura |
+|---|---|---|---|
+| Legenda enviada pelo canal (22% dos vídeos) | +28% | +15% a +42% | Forte; 10/11 nichos; PT +45%, EN +24%. Pode ser causa reversa (capricho em vídeo que já vai bem) |
+| Duração: dobro (dentro do canal) | +14% | +8% a +21% | Forte; 10/11 nichos. <5 min ≈ −21%; 15-60 min ≈ +8%; 60+ min ≈ 0 |
+| Emoji no título (11%) | +11% | +2% a +21% | Provável, não passa na correção conservadora; PT +17%, EN +4% |
+| Dobro de links na descrição | +7% | +2% a +13% | Provável; 10/11 nichos; provavelmente marca vídeo patrocinado/produção maior |
+| Uma palavra em CAIXA ALTA no título (45%) | +7% | +1% a +13% | Provável; 9/11 nichos. Título inteiro em caixa alta: 0 (−10% a +11%) |
+| Fim de semana (28%) | +6% | 0% a +11% | Fraco; mais em EN. Faixa de hora: sem efeito |
+| Rosto grande na miniatura (28%) | +6% | 0% a +11% | Fraco; PT +13%, EN 0 |
+| Texto da miniatura repete o título (23%) | +5% | 0% a +10% | Fraco |
+| Título em 1ª pessoa (eu/meu/I/my) | −7% | −13% a −1% | Fraco; só em inglês (−10%), PT 0 |
+| Miniatura com mais contraste (+1 desvio) | −3% | −5% a −1% | Fraco; 9/11 nichos |
+| Tamanho do título (+10 caracteres) | +1% | −1% a +3% | Sem efeito |
+| Tamanho da descrição (dobro) | 0% | −3% a +4% | Sem efeito |
+| Número, pergunta, "você", separador, parênteses no título | −3% a +2% | todos cruzam zero | Sem efeito |
+| Nenhuma tag (11%) | +14% | −6% a +38% | Sem sinal de prejuízo; dobrar tags +3% incerto. Bate com o oficial (tags são secundárias) |
+| Capítulos (21%) | +6% | −6% a +20% | Incerto; PT +16%, EN −1% |
+| Texto, 5+ palavras, número ou $ na miniatura | −1% a +3% | todos cruzam zero | Sem efeito |
+
+### 17B.3 Miniaturas: como são e o que muda
+
+- Retrato da amostra: 73% têm texto (mediana 2 palavras), 52% rosto, 28% rosto grande, 46% texto em caixa alta, 18% número. Finanças é o mais carregado (82% rosto, 93% texto, 38% com 5+ palavras); infantil e histórias quase sem rosto (28-30%).
+- Nos 20% melhores vs 20% piores vídeos de cada canal, nenhum traço genérico de miniatura difere mais que 2,3 pontos percentuais. Brilho, contraste, saturação e nº de palavras: medianas praticamente iguais.
+- Leitura [INFERÊNCIA]: o estilo da miniatura é do canal e varia pouco entre os vídeos dele; o que decide é *qual* imagem para *qual* ideia, e isso só teste A/B (seção 16) mede. Expressão facial, olhar, setas e estilo não foram medidos (sem leitura por IA).
+
+### 17B.4 Regras práticas derivadas
+
+1. Mande legenda própria nos vídeos importantes, sobretudo em português (o efeito mais forte e consistente; custo baixo). Trate como aposta, não garantia.
+2. Não encurte vídeo só por "SEO": dentro do canal, vídeos abaixo de 5 min ficaram bem abaixo do normal; o ganho para acima de 60 min.
+3. Não perca tempo com tamanho de título, tamanho de descrição ou quantidade de tags: efeito nulo medido.
+4. Uma palavra de ênfase em caixa alta e um emoji pertinente são testes baratos com sinal positivo; título todo em caixa alta não ajuda.
+5. Em inglês, evite começar o título por "I/my" sem motivo; teste a versão sem 1ª pessoa.
+6. Para miniatura, não siga regra genérica ("sempre rosto", "sempre texto"): o dado não mostra ganho. Teste variantes reais no "Testar e comparar".
+
+### 17B.5 Limitações
+
+Correlação, não causa; só views públicas (sem CTR, impressões, retenção); detector de rosto simples e OCR local; 100 vídeos longos mais recentes por canal com 30+ dias; 11 gigantes em português; Shorts, idioma do áudio e dublagem fora da análise.
 
 ---
 

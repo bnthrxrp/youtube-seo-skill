@@ -1,0 +1,258 @@
+channel_id,handle,nome,inscritos,nicho,idioma,origem,porte
+UCIEv3lZ_tNXHzL3ox-_uUGQ,@gordonramsay,Gordon Ramsay,22000000.0,culinaria,en,semente,gigante
+UCMyOj6fhvKFMjxUCp3b_3gA,@NickDiGiovanni,Nick DiGiovanni,48900000.0,culinaria,en,semente,gigante
+UCJFp8uSYCjXOMnkUyb3CQ3Q,@buzzfeedtasty,Tasty,21200000.0,culinaria,en,semente,gigante
+UCk3JZr7eS3pg5AGEvBdEvFg,@VillageCookingChannel,Village Cooking Channel,31100000.0,culinaria,en,busca:cooking,gigante
+UChBEbMKI1eCcejTtmI32UEw,@JoshuaWeissman,Joshua Weissman,10800000.0,culinaria,en,semente,grande
+UCfyehHM_eo4g5JUyWmms2LA,@SortedFood,Sorted Food,3010000.0,culinaria,en,semente,grande
+UCbpMy0Fg74eXXkvxJrtEn3w,@bonappetit,Bon Appétit,7440000.0,culinaria,en,semente,grande
+UCDq5v10l4wkV5-ZBIJJFbzQ,@EthanChlebowski,Ethan Chlebowski,2450000.0,culinaria,en,semente,grande
+UCqqJQ_cXSat0KIAVfIfKkVA,@JKenjiLopezAlt,J. Kenji López-Alt,1760000.0,culinaria,en,semente,medio
+UCuL-5ytBmu6KG0BwjSFaD0g,@NOTANOTHERCOOKINGSHOW,NOT ANOTHER COOKING SHOW,1430000.0,culinaria,en,semente,medio
+UCn5fhcGRrCvrmFibPbT6q1A,@BrianLagerstrom,Brian Lagerstrom ,1810000.0,culinaria,en,semente,medio
+UCfqPIJVbdk_cVswVJMkJhBQ,@vanzaicookingeng,VANZAI COOKING,549000.0,culinaria,en,busca:cooking,medio
+UCh8qpZhEwzejZ55cajXimqQ,@anamariabrogui,Ana Maria Brogui,3560000.0,culinaria,pt,semente,grande
+UCTNFtLQWA94BNeu0lE4YwuQ,@isamaraamancio,Isamara Amâncio,10700000.0,culinaria,pt,semente,grande
+UCF5WzS-iBJRfp_EcFI-GT1w,@ReceitasdePai,Receitas de Pai,13100000.0,culinaria,pt,semente,grande
+UCRbXS1MKrZ55Vm5G9336BKw,@receitasdacris,Receitas Da Cris,7630000.0,culinaria,pt,semente,grande
+UCfSPnAlDUTiIOAvNOI-a4yQ,@panelinha,Panelinha,1160000.0,culinaria,pt,semente,medio
+UCBuP6FLScLbgTEUWP0wmI3A,@tudogostoso,TudoGostoso,1000000.0,culinaria,pt,semente,medio
+UCutVDaLOlX-rJyWqsCjvZTA,@MaisReceitas,Mais Receitas ,911000.0,culinaria,pt,busca:receitas,medio
+UCx3NjxjO72sXhTih4NlLclA,@Receitasqueamo,Receitas que amo,1440000.0,culinaria,pt,busca:receitas,medio
+UCWpk9PSGHoJW1hZT4egxTNQ,@ruhicenetdocs,Ruhi Cenet Documentaries,20200000.0,documentario,en,busca:documentary,gigante
+UCYwVxWpjeKFWwu8TML-Te9A,@JCS,JCS - Criminal Psychology,5640000.0,documentario,en,semente,grande
+UCtPrkXdtCM5DACLufB9jbsA,@MrBallen,MrBallen,11400000.0,documentario,en,semente,grande
+UCpFFItkfZz1qz5PpHpqzYBw,@Nexpo,Nexpo,4010000.0,documentario,en,semente,grande
+UCRcgy6GzDeccI7dkbbBna3Q,@LEMMiNO,LEMMiNO,5930000.0,documentario,en,semente,grande
+UCl3SuH2Ue044b7ACX1syk4A,@DarkDocs,Dark Docs,1210000.0,documentario,en,semente,medio
+UCU4BHh9Dwfd7-I_xTZ5037Q,@FilmRiseTrueCrime,FilmRise True Crime,1620000.0,documentario,en,busca:true crime,medio
+UCmgpjm53OGZd8a2z859a9vw,@TrueCrimeFix,True Crime Fix,280000.0,documentario,en,busca:true crime,medio
+UCFkFUrV28yy4kpg9b6LNhuQ,@TrueCrimeCentral,True Crime Central,1460000.0,documentario,en,busca:true crime,medio
+UCKDjjeeBmdaiicey2nImISw,@brasilparalelo,Brasil Paralelo,5390000.0,documentario,pt,semente,grande
+UCJ9tHJbCa8ZoMbapfJLy0ZQ,@imineoDocumentaires,imineo Documentaries,3620000.0,documentario,pt,busca:documentário,grande
+UCQ1GpKa15ulyoQuxz7H4rng,@DWDocumental,DW Documental,6220000.0,documentario,pt,busca:documentário,grande
+UCMV3aTOwUtG5vwfH9_rzb2w,@SparkDocs,Spark,2000000.0,documentario,pt,busca:documentário,grande
+UCzllZARkGekq-aNVL4qPxjw,@documentarioterrestre,Documentário Terrestre,330000.0,documentario,pt,busca:documentário,medio
+UChmOnQVSZsh2Gnt7zRqkRdw,@RuhiÇenetPortuguês,Ruhi Çenet Português,1130000.0,documentario,pt,busca:documentário,medio
+UCtgzOmdSA1HXu01PZg3Kkwg,@witnessdocumentaries,Witness,269000.0,documentario,pt,busca:documentário,medio
+UC9sXw4ZdPEIp6bYGvLW-_iA,@vprodocumentary,vpro documentary,373000.0,documentario,pt,busca:documentário,medio
+UCHnyfMqiRRG1u-2MsSQLbXA,@veritasium,Veritasium,21500000.0,educacao,en,semente,gigante
+UCsXVk37bltHxD1rDPwtNM8Q,@kurzgesagt,Kurzgesagt – In a Nutshell,25800000.0,educacao,en,semente,gigante
+UCY1kMZp36IQSyNx_9h4mpCg,@MarkRober,Mark Rober,86800000.0,educacao,en,semente,gigante
+UC6nSFpj9HTCZ5t-N3Rm3-HA,@Vsauce,Vsauce,25400000.0,educacao,en,semente,gigante
+UCYO_jab_esuFRV4b17AJtAw,@3blue1brown,3Blue1Brown,8780000.0,educacao,en,semente,grande
+UC6107grRI4m0o2-emgoDnAA,@smartereveryday,SmarterEveryDay,11900000.0,educacao,en,semente,grande
+UC2C_jShtL725hvbm1arSV9w,@CGPGrey,CGP Grey,7050000.0,educacao,en,semente,grande
+UCUHW94eEFW7hkUMVaZz4eDg,@MinutePhysics,minutephysics,5990000.0,educacao,en,semente,grande
+UCSju5G2aFaWMqn-_0YBtq5A,@standupmaths,Stand-up Maths,1360000.0,educacao,en,semente,medio
+UCNz9FA4OYPfEU-6t6jsHOIA,@ScienceExplainedOfficial,Science Explained,1410000.0,educacao,en,busca:science explained,medio
+UC8VhAX-voAUegprM4SpHQJQ,@wacky.science,Wacky Science,831000.0,educacao,en,busca:science explained,medio
+UCqbOeHaAUXw9Il7sBVG3_bw,@Freesciencelessons,Freesciencelessons,1000000.0,educacao,en,busca:science explained,medio
+UCKHhA5hN2UohhFDfNXB_cvQ,@manualdomundo,Manual do Mundo,20600000.0,educacao,pt,semente,gigante
+UCbAiIkPobUFy71zlmwVw3jw,@fatosdesconhecidos,Fatos Desconhecidos,23000000.0,educacao,pt,semente,gigante
+UClu474HMt895mVxZdlIHXEA,@nerdologia,Nerdologia,3420000.0,educacao,pt,semente,grande
+UCn9Erjy00mpnWeLnRqhsA1g,@CienciaTodoDia,Ciência Todo Dia,7950000.0,educacao,pt,semente,grande
+UCT0JugAtGmqiYkwxFZOwAtg,@descomplica,Descomplica,4780000.0,educacao,pt,semente,grande
+UC_Fk7hHbl7vv_7K8tYqJd5A,@SpaceToday,SpaceToday,2370000.0,educacao,pt,semente,grande
+UCk5BcU1rOy6hepflk7_q_Pw,@MeteoroBrasil,Meteoro Brasil,1800000.0,educacao,pt,semente,medio
+UCYWtYb0GcYrhDxOykcUpzJw,@NuncaTePediNada,Nunca Te Pedi Nada,1920000.0,educacao,pt,semente,medio
+UCMbGt0MuxDW6rQAX_Ih8gvQ,@AlemDaCiencia_Sacani,Além da Ciência - Sérgio Sacani,332000.0,educacao,pt,busca:ciência,medio
+UCUchos83q8hTGppX3fV5ppw,@cienciamapeada, chemistry maps,250000.0,educacao,pt,busca:ciência,medio
+UCX6OQ3DkcsbYNE6H8uQQuVA,@MrBeast,MrBeast,528000000.0,entretenimento,en,semente,gigante
+UCRijo3ddMTht_IHyNSNXpNQ,@dudeperfect,Dude Perfect,62900000.0,entretenimento,en,semente,gigante
+UCDogdKl7t7NHzQ95aEwkdMw,@Sidemen,Sidemen,23400000.0,entretenimento,en,semente,gigante
+UCnmGIkw-KdI0W5siakKPKog,@ryan,Ryan Trahan,24200000.0,entretenimento,en,semente,gigante
+UCxOzbkk0bdVl6-tH1Fcajfg,@BetaSquad,Beta Squad,12200000.0,entretenimento,en,semente,grande
+UCyps-v4WNjWDnYRKmZ4BUGw,@airrack,Airrack,19700000.0,entretenimento,en,semente,grande
+UCvK4bOhULCpmLabd2pDMtnA,@YesTheory,Yes Theory,10300000.0,entretenimento,en,semente,grande
+UCPcFg7aBbaVzXoIKSNqwaww,@jacksfilms,jacksfilms,4930000.0,entretenimento,en,semente,grande
+UCamLstJyCa-t5gfZegxsFMw,@ColinandSamir,Colin and Samir,1630000.0,entretenimento,en,semente,medio
+UCTaLKmIZftQT8unh0RA0k_w,@multidochallengeportuguese4594,Multi DO Challenge Portuguese,1190000.0,entretenimento,en,busca:challenge,medio
+UC1Ho_JaEn_gg230Qs14YUPQ,@TheChallenge,MTV's The Challenge,300000.0,entretenimento,en,busca:challenge,medio
+UCSlpl1nxJMHecU5AETN2jOA,@SNChallenge,SN Challenge,1330000.0,entretenimento,en,busca:challenge,medio
+UC2bYhAHyaqfWlPXWBVk4BcA,@enaldinho,Enaldinho,49100000.0,entretenimento,pt,semente,gigante
+UCV306eHqgo0LvBf3Mh36AHg,@felipeneto,Felipe Neto,48200000.0,entretenimento,pt,semente,gigante
+UCbTVTephX30ZhQF5zwFppBg,@rezendeevil,rezendeevil,34600000.0,entretenimento,pt,semente,gigante
+UCPHXtOVmjvbP9OJihsd7gCg,@canalcanalha,Canal Canalha,21400000.0,entretenimento,pt,semente,gigante
+UCEWHPFNilsT0IfQfutVzsag,@portadosfundos,Porta dos Fundos,19300000.0,entretenimento,pt,semente,grande
+UCR3vcUrhFUdzagng58ueI2w,@inventonahora,Invento na Hora,14100000.0,entretenimento,pt,semente,grande
+UCm2CE2YfpmobBmF8ARLPzAw,@cauemoura,Caue Moura,5120000.0,entretenimento,pt,semente,grande
+UCio9eHYbIrKYK0j71nfUEqA,@diogodefante,DIOGO DEFANTE,2890000.0,entretenimento,pt,semente,grande
+UCFrGMvYxMGcMfKsY3yfM0rg,@desafiocabelao,Guilherme Ferreira Desafio Cabelão,308000.0,entretenimento,pt,busca:desafio,medio
+UCuHQ6ZfKTnZmCEM6Hl7ZvwA,@desafio_aceito,Desafio Aceito,688000.0,entretenimento,pt,busca:desafio,medio
+UCqmMHMYAskFxdToagM0AuHA,@Superaeldesafio,Supera El Desafio,1130000.0,entretenimento,pt,busca:desafio,medio
+UCaer_6XCAPuqnPvo-JMmwag,@WolfooDesafioDivertido,Wolfoo Desafio Divertido ,428000.0,entretenimento,pt,busca:desafio,medio
+UCWJ2lWNubArHWmf3FIHbfcQ,@NBA,NBA,24600000.0,esportes,en,semente,gigante
+UCvgfXK4nTYKudb0rFR6noLA,@ufc,UFC,23300000.0,esportes,en,semente,gigante
+UCDVYQ4Zhbm3S2dlz7P1GBDg,@NFL,NFL,16900000.0,esportes,en,semente,grande
+UCB_qr75-ydFVKSF9Dmo6izg,@Formula1,FORMULA 1,15400000.0,esportes,en,semente,grande
+UC3L9XPe0_FGfRG-CMGtBvFg,@JxmyHighroller,JxmyHighroller,2660000.0,esportes,en,semente,grande
+UC4mLlRa_dezwvytudo9s1sw,@Deestroying,Deestroying,6580000.0,esportes,en,semente,grande
+UCDRmGMSgrtZkOsh_NQl4_xw,@SecretBaseSBN,Secret Base,1550000.0,esportes,en,semente,medio
+UCZ7wY7MRDSygp63HIEfdQZA,@skysportsfootball,Sky Sports Football,909000.0,esportes,en,busca:football highlights,medio
+UC8XIWE3P6T03q648iI4NYEw,@UnderTheRadarHighlightVideos,utrhighlightvideos,599000.0,esportes,en,busca:football highlights,medio
+UC0jPwNs4B7yJySNewHan5hQ,@stansportfc,Stan Sport Football,1110000.0,esportes,en,busca:football highlights,medio
+UCZiYbVptd3PVPf4f6eR6UaQ,@CazeTV,CazéTV,42000000.0,esportes,pt,semente,gigante
+UCFjrDmEnxrG5TRGVO0TPHLA,@desimpedidos,Desimpedidos,10100000.0,esportes,pt,semente,grande
+UCGFNp4Pialo9wjT9Bo8wECA,@futparodias,FutParódias,11600000.0,esportes,pt,semente,grande
+UCTeuEMYybdsJXTR7dOiGLYg,@pilhado,Pilhado,3140000.0,esportes,pt,semente,grande
+UCs-6sCz2LJm1PrWQN4ErsPw,@TNTSportsBR,TNT Sports Brasil,13600000.0,esportes,pt,semente,grande
+UCkYRv-hbWjbq8YC_ZsoYoMg,@RicaPerrone,Rica Perrone,675000.0,esportes,pt,semente,medio
+UCRpuxdZGkUpiqPfsrqe1xoQ,@FutebolNacional,Futebol Nacional,887000.0,esportes,pt,busca:futebol,medio
+UCI2NNtfcLlI3twXzut_cpeQ,@SuperStrikasFootballCartoons,Super Futebol Desenhos Animados,581000.0,esportes,pt,busca:futebol,medio
+UCPjFFQQbEnf2mPtrDncSn6w,@lucr4zyfutebol,LuCr4zy Futebol,1880000.0,esportes,pt,busca:futebol,medio
+UCV6KDgJskWaEckne5aPA0aQ,@GrahamStephan,Graham Stephan,5180000.0,financas,en,semente,grande
+UCGy7SkBjcIAgTiwkXEtPnYg,@AndreiJikh,Andrei Jikh,3420000.0,financas,en,semente,grande
+UCUvvj5lwue7PspotMDjk5UA,@MeetKevin,Meet Kevin,2060000.0,financas,en,semente,grande
+UCT3EznhW_CNFcfOlyDNTLLw,@MinorityMindset,Minority Mindset,2540000.0,financas,en,semente,grande
+UCkCGANrihzExmu9QiqZpPlQ,@HowMoneyWorks,How Money Works,1770000.0,financas,en,semente,medio
+UCASM0cgfkJxQ1ICmRilfHLw,@PBoyle,Patrick Boyle,1370000.0,financas,en,semente,medio
+UCDXTQ8nWmx_EhZ2v-kp7QxA,@BenFelixCSI,Ben Felix,659000.0,financas,en,semente,medio
+UCFCEuCsyWP0YkP3CZ3Mr01Q,@ThePlainBagel,The Plain Bagel,1230000.0,financas,en,semente,medio
+UC8mDF5mWNGE-Kpfcvnn0bUg,@MePoupe,Me Poupe!,7740000.0,financas,pt,semente,grande
+UCT4nDeU5pv1XIGySbSK-GgA,@primorico,O Primo Rico,7860000.0,financas,pt,semente,grande
+UCM3vJxmuJJkk1r0yzFI9eZg,@investidorsardinha,Investidor Sardinha l Raul Sena,2040000.0,financas,pt,semente,grande
+UCOjXqrOxAdXa04obIQREfCA,@PrimoPobre,Primo Pobre,4330000.0,financas,pt,busca:educação financeira,grande
+UCrp0zmecZ3TNV8FSR-tjv7A,@economistasincero,Economista Sincero,1300000.0,financas,pt,semente,medio
+UCmhzmQBdXP9TeRtpQ-iWSPg,@nathfinancas,Nath Finanças,444000.0,financas,pt,semente,medio
+UCnBNoed6NaPlpL8blj1yy8Q,@ClubedoValor,Clube do Valor,1220000.0,financas,pt,semente,medio
+UCPHlhRG48uL-H5DPgVC32gg,@investidordeverdade,Investidor de Verdade,507000.0,financas,pt,busca:investimentos,medio
+UC-lHJZR3Gqxm24_Vd_AJ5Yw,@PewDiePie,PewDiePie,109000000.0,games,en,semente,gigante
+UC7_YxT-KID8kRbqZo7MyscQ,@markiplier,Markiplier,39000000.0,games,en,semente,gigante
+UCYzPXprvl5Y-Sf0g4vX-m6g,@jacksepticeye,jacksepticeye,31100000.0,games,en,semente,gigante
+UCTkXRDQl0luXxVQrRQvWS6w,@dream,Dream,34800000.0,games,en,semente,gigante
+UCshoKvlZGZ20rVgazZp5vnQ,@CaptainSparklez,CaptainSparklez,11400000.0,games,en,semente,grande
+UCq6VFHwMzcMXbuKyG7SQYIg,@penguinz0,penguinz0,18300000.0,games,en,semente,grande
+UCo_IB5145EVNcf8hw1Kku7w,@GameTheory,The Game Theorists,19600000.0,games,en,semente,grande
+UCdoPCztTOW7BJUPk2h5ttXA,@CallMeKevin,Call Me Kevin,3650000.0,games,en,semente,grande
+UCZ7AeeVbyslLM_8-nVy2B8Q,@SkillUp,Skill Up,1110000.0,games,en,semente,medio
+UCeTfBygNb1TahcNpZyELO8g,@JacobGeller,Jacob Geller,1420000.0,games,en,semente,medio
+UClOGLGPOqlAiLmOvXW5lKbw,@MandaloreGaming,MandaloreGaming,1000000.0,games,en,semente,medio
+UC5d4trgMB_aoHKQVrKf3NTQ,@tjgamingbr,TJ Gaming,799000.0,games,en,busca:gaming,medio
+UCIPA6iWNaoetaa1T46RkzXw,@AuthenticGames,AuthenticGames,20200000.0,games,pt,semente,gigante
+UCIXguhHCl8eDTkXpEuiGPUA,@Jazzghost,Jazzghost,25300000.0,games,pt,semente,gigante
+UCqJ5zFEED1hWs0KNQCQuYdQ,@Mikecrack,Mikecrack,58700000.0,games,pt,busca:minecraft,gigante
+UCjBO43ykxlSs3j7F7EXcBUQ,@TazerCraft,TazerCraft,15100000.0,games,pt,semente,grande
+UCIwspRtKNszHhIhl36gREjQ,@alanzoka,alanzoka,9380000.0,games,pt,semente,grande
+UC0bC92gFO25qcJcECTQNN_A,@FlakesPower,Flakes Power,7460000.0,games,pt,semente,grande
+UCWKtHaeXVzUscYGcm0hEunw,@BRKsEDU,BRKsEDU,10000000.0,games,pt,semente,grande
+UC5ZTRH1zclthyc6b_D3m2Pw,@Gaules,Gaules,1300000.0,games,pt,semente,medio
+UCFOZ9I_FwRE1hTEX65NFunA,@PatoPapao,Pato Papão,1350000.0,games,pt,semente,medio
+UChbwE8OaITH1rhi2I0ny3Cg,@Velberan,Velberan,888000.0,games,pt,semente,medio
+UCVZAfLep-Ju-zAJsAGSVUNA,@gameplayproplayer,Gameplay Proplayer,1500000.0,games,pt,busca:gameplay,medio
+UC4rlAVgAK0SGk-yTfe48Qpw,@BRIGHTSIDEOFFICIAL,BRIGHT SIDE,44500000.0,historias,en,semente,gigante
+UCo8bcnLyZH8tBIH9V1mLgqQ,@theodd1sout,TheOdd1sOut,20900000.0,historias,en,semente,gigante
+UCbKWv2x9t6u8yZoB3KcPtnw,@alanbecker,Alan Becker,34500000.0,historias,en,semente,gigante
+UCn_FAXem2-e3HQvmK-mOH4g,@GLITCH,GLITCH,23500000.0,historias,en,semente,gigante
+UCfdNM3NAhaBOXCafH7krzrA,@TheInfographicsShow,The Infographics Show,15500000.0,historias,en,semente,grande
+UCGwu0nbY2wSkW8N-cghnLpA,@jaidenanimations,JaidenAnimations,15300000.0,historias,en,semente,grande
+UCn1XB-jvmd9fXMzhiA6IR0w,@Domics,Domics,7150000.0,historias,en,semente,grande
+UCsKVP_4zQ877TEiH_Ih5yDQ,@illymation,illymation,2800000.0,historias,en,semente,grande
+UC7dHBh9QmYF1L0TOeGIzZgw,@LazyMasquerade,Lazy Masquerade,1910000.0,historias,en,semente,medio
+UCTo5eS7vsk-stGqAO6_0bHg,@StoryBoxAnimated,StoryBox Animated,220000.0,historias,en,busca:animated stories,medio
+UC8BzE8H7qoFa60JjaRgmIfg,@AnimatedStories,Animated Stories,764000.0,historias,en,busca:animated stories,medio
+UCnaxsUgPOL8kvktSFqSAaJw,@This-is-Naxon,Naxon - Stories For Men,520000.0,historias,en,busca:animated stories,medio
+UCj0O6W8yDuLg3iraAXKgCrQ,@vocesabia,Você Sabia?,47300000.0,historias,pt,semente,gigante
+UCVGBZh_SuBLGjpo6_07raCQ,@minhahistoriaemanimacao,Minha História em Animação,2610000.0,historias,pt,busca:histórias animadas,grande
+UCAfRk-fbNGwVTfbXcmhIWoQ,@Mi-Historia-Animada,Mi Historia Animada,8450000.0,historias,pt,busca:histórias animadas,grande
+UC4jHJsOhFa2w_ySI9fJ5p5w,@JuMCassini,Ju Cassini,3390000.0,historias,pt,busca:histórias de terror,grande
+UCGdQlv3wbQPK6Iv3YAYvTKA,@Relatosdelanoche,Relatos de la Noche,2420000.0,historias,pt,busca:histórias de terror,grande
+UC045Mjo8h8kkbQUOi4EAOnQ,@whatifportugues,E se - What If Português,279000.0,historias,pt,busca:e se,medio
+UCQyiVRSy6z3kBQmZsBQGj3Q,@ESeForReal,E Se For Real ?,220000.0,historias,pt,busca:e se,medio
+UCcJObmRWopywvCf_4wMuxGw,@TikTakDraw-Português,TikTak Draw - Português,604000.0,historias,pt,busca:histórias de terror,medio
+UCIBBTwgiy7ExTrUZgPtiIxw,@TikTakDrawTerror-Português,TikTak Draw Terror - Português,240000.0,historias,pt,busca:histórias de terror,medio
+UCbCmjCuTUZos6Inko4u57UQ,@CoComelon,Cocomelon - Nursery Rhymes,203000000.0,infantil,en,semente,gigante
+UCcdwLMPsaU2ezNSJU1nFoBQ,@Pinkfong,Baby Shark - Pinkfong Kids’ Songs & Stories,85400000.0,infantil,en,semente,gigante
+UC5PYHgAzJ1wLEidB58SK6Xw,@Blippi,Blippi - Educational Videos for Kids,27600000.0,infantil,en,semente,gigante
+UCG2CL6EUjG8TVT1Tpl9nJdg,@msrachel,Ms Rachel - Toddler Learning Videos,22000000.0,infantil,en,semente,gigante
+UCVzLLZkDuFGAE2BGdBuBNBg,@BlueyOfficialChannel,Bluey - Official Channel,15100000.0,infantil,en,semente,grande
+UCPlwvN0w4qFSP1FllALB92w,@Numberblocks,Numberblocks,15600000.0,infantil,en,semente,grande
+UChULBXQf9VDYAi3vRLu_U-w,@GeckosGarage,Gecko's Garage - Trucks For Children,3490000.0,infantil,en,semente,grande
+UC8NFs-VWUsyuq4zaYVVMgCQ,@ScratchGarden,Scratch Garden,2350000.0,infantil,en,semente,grande
+UCTjUKu1E3PpOhX8kVhiQmrw,@NurseryRhymesBH,Nursery Rhymes - Kids Songs,212000.0,infantil,en,busca:nursery rhymes,medio
+UCDyVPxlbm0sGSeEnVeoZfxQ,@MoMorall,MoMoral - Nursery Rhymes,266000.0,infantil,en,busca:nursery rhymes,medio
+UCD0QwRfldV3uTXKA0zaTC4Q,@SpeediesCarNurseryRhymes,Speedies Car Nursery Rhymes & Kids Songs,393000.0,infantil,en,busca:nursery rhymes,medio
+UCLyrc9IQPuDYQ2Y5Z35O_OQ,@WolfooNurseryRhymes,Wolfoo Nursery Rhymes,1480000.0,infantil,en,busca:nursery rhymes,medio
+UC_gV70G_Y51LTa3qhu8KiEA,@luccasneto,LUCCAS NETO,53600000.0,infantil,pt,semente,gigante
+UCBAb_DK4GYZqZR9MFA7y2Xg,@galinhapintadinha,Galinha Pintadinha,39600000.0,infantil,pt,semente,gigante
+UCV4XcEqBswMCryorV_gNENw,@turmadamonica,Turma da Mônica,21800000.0,infantil,pt,semente,gigante
+UC2xjgvWb9cx5F637XjsUNxw,@toycantando,toycantando,31100000.0,infantil,pt,semente,gigante
+UC0cGVh96osM7yqMu0ENSKKQ,@MundoBita,Mundo Bita,14500000.0,infantil,pt,semente,grande
+UCZcsG6kUpOLQZZpTMSAernw,@BobZoom,Bob Zoom,9100000.0,infantil,pt,semente,grande
+UCGs6qb1ohFhDzeHbYeJlsAA,@palavracantada,Palavra Cantada Oficial,4340000.0,infantil,pt,semente,grande
+UCe-BBpsnL89BMr6WbvBQ9dw,@PatatiPatata,Patati Patatá,11800000.0,infantil,pt,semente,grande
+UCSV1kSum7-9ZWpN71bwhmZg,@ShowdaFamiliaGato,Show da Família Gato - Músicas Infantis,908000.0,infantil,pt,busca:músicas infantis,medio
+UCZQwlUa24HW946PTZKKrkJA,@cocobi_pt,Cocobi Português - Músicas Infantis,1290000.0,infantil,pt,busca:músicas infantis,medio
+UCZib24pQcmSA7L00JhASTnQ,@LeoPortugues,Leo Português - Músicas Infantis,994000.0,infantil,pt,busca:músicas infantis,medio
+UC4fehvVwdMwAGCNtpMzUglQ,@Lalafun-CançõesInfantisdeAnima,Lalafun - Canções Infantis de Animais,258000.0,infantil,pt,busca:músicas infantis,medio
+UC78cxCAcp7JfQPgKxYdyGrg,@emmachamberlain,emma chamberlain,12000000.0,lifestyle,en,semente,grande
+UCbAwSkqJ1W_Eg7wr3cp5BUA,@safiya,Safiya Nygaard,10200000.0,lifestyle,en,semente,grande
+UCJ24N4O0bP7LGLBDvye7oCA,@mattdavella,Matt D'Avella,4060000.0,lifestyle,en,semente,grande
+UCoOae5nYA7VqaXzerajD0lg,@aliabdaal,Ali Abdaal,6710000.0,lifestyle,en,semente,grande
+UCeSu6-j3LxdlBLZZfmEpcpg,@MeuCarroLifeStyle,Meu Carro LifeStyle,1680000.0,lifestyle,en,busca:lifestyle,medio
+UC7icK7VNx5TL8lpI-wWYTLQ,@NetLifestyle,Net Lifestyle,577000.0,lifestyle,en,busca:lifestyle,medio
+UCGMjz3p7wHJbSq9XE--hlGw,@CleideLifestyle,Cleide Lifestyle,1400000.0,lifestyle,en,busca:lifestyle,medio
+UCFtdVVfiZU_s3XZC2wSHCYA,@lifestyle101_official,Lifestyle 101,336000.0,lifestyle,en,busca:lifestyle,medio
+UCjvgGbPPn-FgYeguc5nxG4A,@souravjvlogs,Sourav Joshi Vlogs,42600000.0,lifestyle,pt,busca:vlog,gigante
+UCnmaW_YVh9iJAFVOsLR7W2w,@camilacoelho,Camila Coelho Português,3270000.0,lifestyle,pt,semente,grande
+UCYcClChNM-0rjqCGobSfJ4A,@karenbachini,Karen Bachini,2820000.0,lifestyle,pt,semente,grande
+UCbIV7t22dH_d75fv1GP56zA,@JonVlogs,Jon Vlogs,7010000.0,lifestyle,pt,busca:vlog,grande
+UCnZWFiZOtbKPWkRVSqhnJ8A,@ArayaVlogs,Araya Vlogs,4100000.0,lifestyle,pt,busca:vlog,grande
+UCC6y7YlTXFytP8T5irVONjQ,@AnglikosikVlog,Anglikosik Vlog,883000.0,lifestyle,pt,busca:vlog,medio
+UC-cPeyr4sxX8afLbd9ziumA,@VlogdoRodrigão-v4l,Vlog do Rodrigão,1160000.0,lifestyle,pt,busca:vlog,medio
+UCg-dUfq-_soMT53AOIP1QwA,@vlogdopaisolteiro,vlog do pai solteiro,1450000.0,lifestyle,pt,busca:vlog,medio
+UCuS5fmeEDpnW5JPMdRhGm7A,@MakingithappenVlog,Making it happen Vlog,587000.0,lifestyle,pt,busca:vlog,medio
+UCBJycsmduvYEL83R_U4JriQ,@mkbhd,Marques Brownlee,21400000.0,tech,en,semente,gigante
+UCsTcErHg8oDvUnTzoqsYeNw,@unboxtherapy,Unbox Therapy,25700000.0,tech,en,semente,gigante
+UCMiJRAwDNSNzuYeN2uWa0pA,@Mrwhosetheboss,Mrwhosetheboss,23100000.0,tech,en,semente,gigante
+UCXuqSBlHAE6Xw-yeJA0Tunw,@LinusTechTips,Linus Tech Tips,16900000.0,tech,en,semente,grande
+UCey_c7U86mJGz1VJWH5CYPA,@iJustine,iJustine,7050000.0,tech,en,semente,grande
+UCVYamHliCI9rw1tHR1xbkfw,@Dave2D,Dave2D,3690000.0,tech,en,semente,grande
+UCWFKCr40YwOZQx8FHU_ZqqQ,@JerryRigEverything,JerryRigEverything,10400000.0,tech,en,semente,grande
+UCeeFfhMcJa1kjtfZAGskOCA,@techlinked,TechLinked,1980000.0,tech,en,semente,medio
+UCI8iQa1hv7oV_Z8D35vVuSg,@Hardwareunboxed,Hardware Unboxed,1180000.0,tech,en,semente,medio
+UCR-DXc1voovS8nhAvccRZhg,@JeffGeerling,Jeff Geerling,1100000.0,tech,en,semente,medio
+UCSOpcUkE-is7u7c4AkLgqTw,@TheMrMobile,MrMobile [Michael Fisher],1280000.0,tech,en,semente,medio
+UC_bXJnsgwOqEPA_-6N6faKw,@canaltech,Canaltech,3710000.0,tech,pt,semente,grande
+UCdmGjywrxeOPfC7vDllmSgQ,@tecmundo,TecMundo,4200000.0,tech,pt,semente,grande
+UCuxfOdbKQy0tgGXcm9sjHiw,@coisadenerd,Coisa de Nerd,11100000.0,tech,pt,semente,grande
+UCY5nGkuALqkKKOVhivryH3A,@GesielTaveira,Gesiel Taveira,4700000.0,tech,pt,busca:review celular,grande
+UCqpNnEzmmlzBfdy3X0eMOMg,@tecnoblog,Tecnoblog,291000.0,tech,pt,semente,medio
+UCEf5U1dB5a2e2S-XUlnhxSA,@Diolinux,Diolinux,834000.0,tech,pt,semente,medio
+UCPgobiJwXLTYC0wafp29XYQ,@TudoCelular,TudoCelular,1220000.0,tech,pt,semente,medio
+UCb2vlvWWwJP9YquvIV3NhpQ,@mundoconectado,Mundo Conectado,703000.0,tech,pt,semente,medio
+UC4LW3sOslC14Vn5bcoNUBkg,@KBSDocumentary,KBS 다큐,2820000.0,documentario,pt,reforco:busca:documentário,grande
+UCmlg_UCp1iCM2asqvSd80Jw,@MisteriosDoMundoMDM,Mistérios do Mundo,353000.0,documentario,pt,reforco:busca:mistérios,medio
+UC9u6695U-mKVG0mm0QF8vIg,@EutimioCarvalhoeosMistériosdoM,Northeast Bahia Network,859000.0,documentario,pt,reforco:busca:mistérios,medio
+UCOrAzkfvibRFgtJ0laQ1iWw,@Misteriosdoespaco,Mistérios do Espaço,1020000.0,documentario,pt,reforco:busca:mistérios,medio
+UCut6MBsClzZvv07vHq_0RWw,@misteriossobrenaturais,Mistérios Sobrenaturais,239000.0,documentario,pt,reforco:busca:mistérios,medio
+UCly58gB7268VKzsH4zlMMvQ,@SiebertScience,Siebert Science,526000.0,educacao,en,reforco:busca:science explained,medio
+UCXgNowiGxwwnLeQ7DXTwXPg,@ScienceAsylum,The Science Asylum,732000.0,educacao,en,reforco:busca:science explained,medio
+UCXAS_Ekkq0iFJ9dSUIkcAkw,@TheEfficientEngineer,The Efficient Engineer,1520000.0,educacao,en,reforco:busca:engineering,medio
+UC2wdo5vU7bPBNzyC2nnwmNQ,@CuttingEdgeEngineering,Cutting Edge Engineering Australia,1040000.0,educacao,en,reforco:busca:engineering,medio
+UClXg6c3kMLlKx7JPUaEss_A,@multidochallengefrench1256,Multi DO Challenge French,1130000.0,entretenimento,en,reforco:busca:challenge,medio
+UC5gluQsikwbfp44hdE7dEfg,@multidochallengepolish3297,Multi DO Challenge Polish,548000.0,entretenimento,en,reforco:busca:challenge,medio
+UCDXo5d-UAYVMENOSBR9o4Rg,@ratatachallengeportuguese9136,RATATA CHALLENGE Portuguese,288000.0,entretenimento,en,reforco:busca:challenge,medio
+UC3aJUKR9vS5CGJ7JdsmUGQQ,@pcrfoodchallenge,PCR FOOD CHALLENGE,424000.0,entretenimento,en,reforco:busca:challenge,medio
+UCHEizExRYIu3ZwoLgHbMAcg,@animalex,Animalex,5060000.0,historias,pt,reforco:busca:animação,grande
+UC1toK6UDXwreacdepXYcyqA,@BRCartoonNetworkvideos,Cartoon Network Brasil,7760000.0,historias,pt,reforco:busca:animação,grande
+UCCwh7AWMiQ-JVnqDiBGSloQ,@guejuanimação,Gu & Ju Animation,2770000.0,historias,pt,reforco:busca:animação,grande
+UCW9hEnFAEsQCiqVOu3QQm2w,@MellyNurseryRhymes,Melly - Nursery Rhymes,487000.0,infantil,en,reforco:busca:nursery rhymes,medio
+UCIqMBrPv0zRqJaUTHHyvZ6g,@TwinkleLittleSongs,Twinkle Little Songs - Nursery Rhymes,1260000.0,infantil,en,reforco:busca:nursery rhymes,medio
+UCFJJziTVsiIVSyRKvXHX37g,@canticosworld,Canticos - Bilingual Nursery Rhymes & Kids Songs,1130000.0,infantil,en,reforco:busca:nursery rhymes,medio
+UCRXXQgZZsMIxXpFncK019DA,@NurseryRhymeStreet,Nursery Rhyme Street - Kids Songs and Rhymes,1960000.0,infantil,en,reforco:busca:nursery rhymes,medio
+UCbt4SegZBQLeXMTMvnrfZtw,@GatoGalactico,Gato Galactico,20600000.0,infantil,pt,reforco:semente,gigante
+UCKe6w0exI94U-RzqAyoY1VA,@MariaClaraeJP,Maria Clara & JP,50800000.0,infantil,pt,reforco:semente,gigante
+UCy7whoHQXzhYxp9AQmrPFVw,@JoséTotoyPortuguês,José Totoy em Português (BR),21800000.0,infantil,pt,reforco:busca:desenho infantil,gigante
+UCkpeuy1OcoOuSnvDnvXamRA,@ylifestyle,Y. LIFE STYLE,281000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UC8GRLDtr12b91BhGq-x92Zg,@TheLifestyleCog,The Lifestyle Cog,1140000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UCeGa-vSdaxefW7sWtkV_K6A,@LifeStyleDesigns,LifeStyle Designs,808000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UChI-cTok8fJePnryAd0mTvQ,@LifestyleHal,Lifestyle Hal,202000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UC4gDBTG2BMuiwJp_Fe2i_2w,@polinlifestyle,Polin Lifestyle,1140000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UCoPBy4H04bx6oJo6MAXuTRQ,@ethioelsylifestyle9486,EthioElsy LifeStyle ,271000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UCf07eBo_ZzNmhVeTRyJDJ3g,@IronManLifestyle,Iron Man Lifestyle,821000.0,lifestyle,en,reforco:busca:lifestyle,medio
+UCNwuVPKVNz95BGNZiP9ocxw,@Baoqi_289,Baoqi’s daily short vlog,251000.0,lifestyle,en,reforco:busca:daily vlog,medio
+UCoLX0U3dsnPlV4H9_HmNMjw,@mayumiivlog,Mayumi Vlog,233000.0,lifestyle,pt,reforco:busca:vlog,medio
+UCPdVoa2NYBpM5bHeiBcrQFA,@BarvinaVlog,Barvina Vlog,1160000.0,lifestyle,pt,reforco:busca:vlog,medio
+UCI9wlUFX_nTRgTnoc8JB6lg,@vlogdetudo,Vlog de Tudo,1650000.0,lifestyle,pt,reforco:busca:vlog,medio
+UCmtj73xU-7RPE1tfd3YxtWA,@LuizCamargoVlog,LUIZ CAMARGO vlog,759000.0,lifestyle,pt,reforco:busca:vlog,medio

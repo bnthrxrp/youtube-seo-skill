@@ -15,6 +15,7 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 - `DIVERGENCIAS.md`: onde praticantes e o YouTube discordam.
 - `GITHUB_SKILLS.md`: levantamento de skills parecidas.
 - `VERIFICACAO_LACUNAS.md`: vereditos das lacunas (confirmado, parcial, desmentido, sem fonte primária).
+- `estudo-10k/`: estudo próprio com 17.882 vídeos longos de 203 canais (PT e EN, 11 nichos): `RESULTADOS.md` em linguagem simples, gráficos, tabelas, dataset (`dados/dataset.parquet`), lista de canais e scripts reproduzíveis (exigem sua própria chave da YouTube Data API em `YOUTUBE_API_KEY`).
 
 **Instalar**
 - Claude Code: copie a pasta para `~/.claude/skills/youtube-seo/` (pessoal) ou `.claude/skills/youtube-seo/` (projeto).
@@ -27,11 +28,12 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 - `[OFICIAL-LIAISON]`: Creator Liaison do YouTube (fala pública, não documentação).
 - `[PAPER]`: papers de engenheiros do Google/YouTube (contexto histórico).
 - `[PRATICANTE]`: ferramentas, consultores, creators, imprensa, estudos (sempre com nome).
+- `[ESTUDO-PRÓPRIO]`: resultado do estudo em `estudo-10k/` (correlação, não causa).
 - `[INFERÊNCIA]`: dedução explícita.
 
 ## English
 
-**What it is.** An operational guide for titles, thumbnails, hooks, descriptions, tags, chapters, keyword research, Shorts, multi-language audio, end screens, cards, posts, live streams, A/B tests, view-drop diagnosis and publishing checklists. The skill is written in Brazilian Portuguese. Research reviewed November 2026 (133 sources; gaps checked against primary sources in v2.1).
+**What it is.** An operational guide for titles, thumbnails, hooks, descriptions, tags, chapters, keyword research, Shorts, multi-language audio, end screens, cards, posts, live streams, A/B tests, view-drop diagnosis and publishing checklists. The skill is written in Brazilian Portuguese. Research reviewed November 2026 (133 sources; gaps checked against primary sources in v2.1). v2.2 adds an original observational study of 17,882 long-form videos from 203 channels in `estudo-10k/` (each video compared with its own channel's baseline; mixed-effects and within-channel models, Benjamini-Hochberg correction, out-of-sample validation). Headline: all 35 metadata and thumbnail traits together explain about 1.5% of within-channel variation; channel-uploaded captions (+28%) and longer duration (+14% per doubling) are the only robust correlates.
 
 **Install**
 - Claude Code: copy the folder to `~/.claude/skills/youtube-seo/` (personal) or `.claude/skills/youtube-seo/` (project).
@@ -39,7 +41,7 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 - Cursor: copy to `.cursor/skills/youtube-seo/` in your project, or paste `SKILL.md` into a rule under `.cursor/rules/`.
 - Other agents: any agent that reads SKILL.md (`name` + `description` frontmatter). Without skill support, use `SKILL.md` as a system prompt and keep the other files available.
 
-**Evidence levels.** OFICIAL (YouTube official docs and channels), OFICIAL-LIAISON (YouTube Creator Liaison statements), PAPER (Google/YouTube research papers, historical context), PRATICANTE (named practitioners, tools, press, studies), INFERÊNCIA (explicit inference). Official sources win when they conflict with practitioners.
+**Evidence levels.** OFICIAL (YouTube official docs and channels), OFICIAL-LIAISON (YouTube Creator Liaison statements), PAPER (Google/YouTube research papers, historical context), PRATICANTE (named practitioners, tools, press, studies), ESTUDO-PRÓPRIO (this repo's own study; correlation, not causation), INFERÊNCIA (explicit inference). Official sources win when they conflict with practitioners.
 
 ## License
 

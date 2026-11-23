@@ -1,0 +1,9 @@
+,20% melhores do canal,20% piores do canal,diferença (pontos)
+Rosto (detector simples),52.4,52.1,0.3
+Rosto grande,28.7,27.3,1.4
+Tem texto,72.9,72.3,0.6
+5+ palavras,15.7,16.6,-0.9
+Texto repete o título,23.8,21.5,2.3
+Número na imagem,18.5,17.3,1.2
+Símbolo de dinheiro,1.9,1.5,0.4
+Texto em CAIXA ALTA,46.7,46.9,-0.2
