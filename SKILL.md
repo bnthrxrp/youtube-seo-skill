@@ -5,7 +5,7 @@ description: 'Use quando pedirem SEO de YouTube, título, thumbnail, descrição
 
 # YouTube SEO e descoberta (long-form e Shorts), com evidência rotulada
 
-Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`. v2.2: estudo próprio com 17.882 vídeos, seção 17B e pasta `estudo-10k/`).
+Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`. v2.2: estudo próprio com 17.882 vídeos, seção 17B e pasta `estudo-10k/`. v2.3: CLI local `youtube-seo`, seção 8.8).
 
 ## Índice
 
@@ -47,6 +47,7 @@ Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTu
 | "Quero testar título/thumbnail" | 16 | Plano de teste com variantes diversas |
 | "Canal novo, por onde começo?" | 14, 6, 8 | Plano de 10 primeiros vídeos |
 | "Pesquisa de palavras-chave" / "o que o povo busca" | 8 | Tabela de termos + intenção + oportunidade |
+| "Roda a ferramenta de palavras-chave, SERP ou lacuna deste repositório" | 8.8, 8, 17B | Saída da CLI `youtube-seo` (não substitui o julgamento desta seção) |
 | "Checklist de publicação" | 19 | Checklist preenchido |
 | "Dublar / outro idioma" | 13 | Plano de idiomas |
 | "Roteiro" / "gancho" / "retenção caiu no início" | 10, 7.4 | Estrutura de roteiro + 3 ganchos |
@@ -428,6 +429,18 @@ Nunca inventar volume de busca. Sem ferramenta, dizer "volume não medido; evid�
 - Escrever termos como o brasileiro digita (ex.: "como fazer", "vale a pena", "melhor celular até 2 mil"). [INFERÊNCIA]
 - Testar variantes com e sem acento no autocomplete; usar a variante comum no título e a outra em tags. [INFERÊNCIA] coerente com "tags ajudam em grafias" F03
 - Materiais BR populares (ex.: HubSpot BR F103) repetem crenças sem base oficial, como "programação regular é favorecida". Ver D1.
+
+### 8.8 Ferramenta local deste repositório
+
+O pacote `youtube_seo` (comando `youtube-seo`, instalação e exemplos no README) automatiza os passos 2 e 7 desta seção e mais três leituras. Não inventa volume de busca e não substitui o julgamento da seção 8.
+
+1. `keywords` — autocomplete público e expansões (como, melhor, vs, letras). Com `YOUTUBE_API_KEY`, também vídeos, tags e canais, na cota gratuita.
+2. `serp` — estrutura de título, duração, idade, legendas, capítulos, porte e concentração. `search.list` custa 100 unidades da cota diária gratuita de 10.000; o cache local não debita de novo.
+3. `competitors` — `channels.list` + `playlistItems.list` + `videos.list` (1 unidade por chamada), o mesmo desenho de `estudo-10k/scripts/03_api.py`, sem `search.list`.
+4. `titles` — traços de título e, com imagem, visão/OCR local. Cruza com a seção 17B e separa sinal forte, correlação fraca e sem efeito confirmado. Gemini só com `--gemini` e `GEMINI_API_KEY`.
+5. `gaps` — sugestão de busca (demanda aparente) contra a força e a idade dos canais ranqueados.
+
+A demanda impressa é estimada: o YouTube não publica volume oficial (regra 8.3). O cruzamento com o estudo é correlação, não causa. [ESTUDO-PRÓPRIO] no que cita a 17B; [INFERÊNCIA] no score de lacuna.
 
 ---
 
