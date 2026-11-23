@@ -845,7 +845,7 @@ Estudo observacional feito para esta skill em 23/11/2026: **17.882 vídeos longo
 | Dobro de links na descrição | +7% | +2% a +13% | Provável; 10/11 nichos; provavelmente marca vídeo patrocinado/produção maior |
 | Uma palavra em CAIXA ALTA no título (45%) | +7% | +1% a +13% | Provável; 9/11 nichos. Título inteiro em caixa alta: 0 (−10% a +11%) |
 | Fim de semana (28%) | +6% | 0% a +11% | Fraco; mais em EN. Faixa de hora: sem efeito |
-| Rosto grande na miniatura (28%) | +6% | 0% a +11% | Fraco; PT +13%, EN 0 |
+| Rosto grande na miniatura (detector simples, 28%) | +6% | 0% a +11% | Fraco; PT +13%, EN 0. Pela leitura por IA: −1% (−5% a +3%) |
 | Texto da miniatura repete o título (23%) | +5% | 0% a +10% | Fraco |
 | Título em 1ª pessoa (eu/meu/I/my) | −7% | −13% a −1% | Fraco; só em inglês (−10%), PT 0 |
 | Miniatura com mais contraste (+1 desvio) | −3% | −5% a −1% | Fraco; 9/11 nichos |
@@ -854,13 +854,20 @@ Estudo observacional feito para esta skill em 23/11/2026: **17.882 vídeos longo
 | Número, pergunta, "você", separador, parênteses no título | −3% a +2% | todos cruzam zero | Sem efeito |
 | Nenhuma tag (11%) | +14% | −6% a +38% | Sem sinal de prejuízo; dobrar tags +3% incerto. Bate com o oficial (tags são secundárias) |
 | Capítulos (21%) | +6% | −6% a +20% | Incerto; PT +16%, EN −1% |
-| Texto, 5+ palavras, número ou $ na miniatura | −1% a +3% | todos cruzam zero | Sem efeito |
+| Texto, 5+ palavras, número ou $ na miniatura | −4% a +1% | todos cruzam zero | Sem efeito (5+ palavras −4% em média, −9% em PT) |
+| Expressão, olhar, seta, estilo, fundo (leitura por IA) | −8% a +9% | todos cruzam ou encostam no zero | Ver 17B.3 |
 
 ### 17B.3 Miniaturas: como são e o que muda
 
-- Retrato da amostra: 73% têm texto (mediana 2 palavras), 52% rosto, 28% rosto grande, 46% texto em caixa alta, 18% número. Finanças é o mais carregado (82% rosto, 93% texto, 38% com 5+ palavras); infantil e histórias quase sem rosto (28-30%).
-- Nos 20% melhores vs 20% piores vídeos de cada canal, nenhum traço genérico de miniatura difere mais que 2,3 pontos percentuais. Brilho, contraste, saturação e nº de palavras: medianas praticamente iguais.
-- Leitura [INFERÊNCIA]: o estilo da miniatura é do canal e varia pouco entre os vídeos dele; o que decide é *qual* imagem para *qual* ideia, e isso só teste A/B (seção 16) mede. Expressão facial, olhar, setas e estilo não foram medidos (sem leitura por IA).
+Duas medições: local (OpenCV/OCR) e leitura por IA (Gemini 3.5 Flash-Lite em 17.876 miniaturas: rostos, expressão, olhar, seta/círculo, objeto, estilo, fundo, antes/depois, número/dinheiro, palavras, relação texto-título). [ESTUDO-PRÓPRIO]
+
+- **Retrato (IA):** 86% com rosto (inclui personagens), 65% rosto grande, 46% olhando para a câmera; expressão feliz 27%, surpresa/choque 21%, séria 18%, medo 4%. 78% com texto, 30% com 5+ palavras; o texto quase nunca repete o título (5%) e 41% complementam. 55% objeto em destaque, 25% número/dinheiro, 17% seta/círculo, 8% antes/depois. Estilo: 57% montagem, 14% ilustração, 8% 3D.
+- **Por nicho:** finanças 97% rosto, 71% olhar para a câmera, 53% com 5+ palavras, 93% montagem; culinária e tech 93% objeto em destaque; infantil 60% feliz e 40% 3D; histórias 61% ilustração e 17% medo/tensão; educação e finanças 27-30% com seta/círculo.
+- **Efeito dentro do canal: nenhum dos 27 traços lidos por IA (nem os locais) passou na correção para múltiplos testes.** Nos 20% melhores vs 20% piores de cada canal, nenhum traço difere mais que 2,3 pontos.
+- **Sinais fracos (margem encosta no zero):** expressão de medo/tensão +9% (0% a +18%), raiva +9% (−1% a +19%), triste +8% (−2% a +20%), séria +6% (0% a +12%, 9/11 nichos); feliz −2%, surpresa/choque 0%. Fundo ilustrado −8% (−15% a +1%), montagem −6% (−12% a +1%), 5+ palavras −4% (−9% a +1%; PT −9%, EN 0). Objeto em destaque +4% (−1% a +8%), texto que complementa o título +3% (−1% a +7%).
+- **Sem efeito:** ter rosto (−3%, −11% a +6%), rosto grande (−1%), olhar para a câmera (+2%, −2% a +5%), seta/círculo (+1%, −5% a +7%), antes/depois (−1%), número/dinheiro (−3%), ter texto (+1%).
+- Medição local: rosto grande +6% pelo detector simples vs −1% pela IA; o resultado muda conforme a régua, outro sinal de efeito fraco.
+- Leitura [INFERÊNCIA]: o estilo da miniatura é do canal e varia pouco entre os vídeos dele; traços genéricos ("cara de choque", "seta", "rosto") não separam vídeo que estoura de vídeo que flopa. Decide *qual* imagem para *qual* ideia, e só teste A/B (seção 16) mede.
 
 ### 17B.4 Regras práticas derivadas
 
@@ -869,11 +876,11 @@ Estudo observacional feito para esta skill em 23/11/2026: **17.882 vídeos longo
 3. Não perca tempo com tamanho de título, tamanho de descrição ou quantidade de tags: efeito nulo medido.
 4. Uma palavra de ênfase em caixa alta e um emoji pertinente são testes baratos com sinal positivo; título todo em caixa alta não ajuda.
 5. Em inglês, evite começar o título por "I/my" sem motivo; teste a versão sem 1ª pessoa.
-6. Para miniatura, não siga regra genérica ("sempre rosto", "sempre texto"): o dado não mostra ganho. Teste variantes reais no "Testar e comparar".
+6. Para miniatura, não siga regra genérica ("sempre rosto", "cara de choque", "seta"): o dado não mostra ganho. Teste variantes reais no "Testar e comparar"; ideias baratas para testar: expressão séria/tensa em vez de feliz, menos de 5 palavras, texto que complementa (não repete) o título, fundo real em vez de ilustrado.
 
 ### 17B.5 Limitações
 
-Correlação, não causa; só views públicas (sem CTR, impressões, retenção); detector de rosto simples e OCR local; 100 vídeos longos mais recentes por canal com 30+ dias; 11 gigantes em português; Shorts, idioma do áudio e dublagem fora da análise.
+Correlação, não causa; só views públicas (sem CTR, impressões, retenção); detector de rosto simples, OCR local e leitura por IA em baixa resolução sem conferência manual; 100 vídeos longos mais recentes por canal com 30+ dias; 11 gigantes em português; Shorts, idioma do áudio e dublagem fora da análise.
 
 ---
 

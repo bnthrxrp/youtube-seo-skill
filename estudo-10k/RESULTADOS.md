@@ -1,6 +1,6 @@
 # Estudo próprio: o que acompanha vídeos que vão acima do normal do canal
 
-Estudo observacional com **17.882 vídeos longos de 203 canais** (11 nichos, português e inglês, 3 portes), coletados em 23/11/2026 pela YouTube Data API v3. Custo: R$ 0,00 (ver CUSTOS.md).
+Estudo observacional com **17.882 vídeos longos de 203 canais** (11 nichos, português e inglês, 3 portes), coletados em 23/11/2026 pela YouTube Data API v3. Miniaturas lidas também por IA (Gemini 3.5 Flash-Lite, 17.876 imagens). Custo total: R$ 21,74 (ver CUSTOS.md).
 
 **Leia isto primeiro:** o estudo mostra o que *acompanha* vídeos que foram melhor que o normal do próprio canal. Não prova que o traço *causa* o resultado. Para provar causa, só teste A/B (o "Testar e comparar" do YouTube Studio).
 
@@ -55,12 +55,30 @@ Gigantes em português são poucos (11) porque existem poucos canais desse taman
 
 ## Padrões de miniatura
 
-Medidos de graça e localmente (OpenCV para cor, contraste e rosto; OCR RapidOCR para o texto). O Gemini não rodou porque a conta estava sem crédito pré-pago, então **não medimos expressão facial, olhar para a câmera, setas, estilo nem antes/depois**.
+Medidos de duas formas: (1) local e grátis: OpenCV para cor, contraste e rosto, OCR RapidOCR para o texto; (2) leitura por IA (Gemini 3.5 Flash-Lite, 17.876 das 17.882 miniaturas): rostos, expressão, olhar para a câmera, seta/círculo, objeto em destaque, estilo, fundo, antes/depois, número/dinheiro, palavras e relação do texto com o título. A IA conta personagens desenhados e rostos pequenos, por isso acha bem mais rostos (86%) que o detector simples (52%).
 
-- **Como as miniaturas são:** 73% têm texto escrito (mediana de 2 palavras), 52% têm rosto, 28% têm rosto grande, 46% usam texto em caixa alta, 18% mostram número, 1,5% símbolo de dinheiro. Finanças é o nicho mais "carregado" (82% com rosto, 93% com texto, 38% com 5+ palavras); infantil e histórias quase não usam rosto (28 a 30%). Ver gráfico 08.
-- **Dentro do canal, a miniatura muda pouco o resultado:** comparando os 20% melhores com os 20% piores vídeos de cada canal, a diferença em todos os traços foi de no máximo 2,3 pontos percentuais (gráfico 07). Mediana de brilho, contraste, saturação e palavras: praticamente iguais.
-- **Sinais fracos (incertos na versão conservadora):** rosto grande **+6%** (de 0% a +11%; +13% em português, zero em inglês); texto da miniatura que repete o título **+5%** (de 0% a +10%); miniatura mais "carregada" de detalhes **+3%** por desvio; mais contraste **−3%** por desvio (de −5% a −1%). Ter texto, ter 5+ palavras, número ou dinheiro na imagem: zero.
-- Leitura honesta: o estilo da miniatura é decidido pelo canal e varia pouco entre os vídeos dele. O que o YouTube mede (cliques e o quanto assistem depois do clique) depende de *qual* imagem, não de traços genéricos como "tem rosto".
+### Como são as miniaturas (leitura por IA)
+
+- 86% têm rosto (humano ou personagem), 65% rosto grande, 46% rosto olhando para a câmera. Expressão: feliz 27%, surpresa/choque 21%, séria 18%, medo 4%, raiva 2%, triste 2%.
+- 78% têm texto escrito, 30% com 5+ palavras. O texto quase nunca repete o título (5%); 41% complementam (dizem algo que o título não diz).
+- 55% têm objeto/produto em destaque, 25% número ou dinheiro, 17% seta ou círculo, 8% antes/depois.
+- Estilo: 57% montagem/foto editada, 14% ilustração, 8% animação 3D. Fundo: 44% liso/desfocado, 25% ilustrado, 20% colagem.
+- Por nicho (gráfico 10): finanças tem 97% de rosto, 88% rosto grande, 71% olhando para a câmera, 53% com 5+ palavras e 93% montagem. Culinária e tech: 93% com objeto em destaque. Infantil: 60% feliz, 40% animação 3D. Histórias: 61% ilustração e 17% medo/tensão. Educação e finanças usam mais seta/círculo (27-30%).
+
+### O que muda o resultado dentro do canal
+
+**Nenhum traço de miniatura passou na correção para muitos testes**, nem na leitura por IA (27 traços), nem na medição local. Comparando os 20% melhores com os 20% piores vídeos de cada canal, nenhum traço difere mais que 2,3 pontos percentuais (gráficos 07 e 09).
+
+Sinais fracos (margem encosta no zero; tratar como ideia para testar, não regra):
+- **Expressões "negativas" e sérias:** medo/tensão **+9%** (de 0% a +18%), raiva +9% (−1% a +19%), triste +8% (−2% a +20%), séria/concentrada +6% (0% a +12%; mesmo sentido em 9 de 11 nichos). Feliz −2% e surpresa/choque 0%: a famosa "cara de choque" não se destacou.
+- **Fundo ilustrado −8%** (de −15% a +1%; 9 de 11 nichos) e **montagem/foto editada −6%** (de −12% a +1%). Fundo em colagem −7% (−15% a +2%).
+- **5+ palavras na miniatura −4%** (de −9% a +1%), puxado pelo português (−9%); em inglês, zero.
+- **Objeto em destaque +4%** (−1% a +8%); **texto que complementa o título +3%** (−1% a +7%).
+- Sem efeito: ter rosto (−3%, de −11% a +6%), rosto grande (−1%), olhar para a câmera (+2%, de −2% a +5%), seta/círculo (+1%, de −5% a +7%), antes/depois (−1%), número/dinheiro (−3%, de −7% a +2%), ter texto (+1%).
+
+Medição local (mantida para comparação): rosto grande pelo detector simples +6% (0% a +11%), texto que repete palavras do título pelo OCR +5% (0% a +10%), mais contraste −3% por desvio (−5% a −1%); nenhum passa na correção cautelosa. A diferença entre "rosto grande" no detector simples (+6%) e na IA (−1%) mostra que o resultado depende de como se mede: mais um motivo para tratar tudo como fraco.
+
+**Leitura honesta:** o estilo da miniatura é decisão do canal e varia pouco entre os vídeos dele. Traços genéricos ("ter rosto", "ter seta", "cara de choque") não separam vídeo que estoura de vídeo que flopa no mesmo canal. O que o YouTube mede é se *esta* imagem faz *este* público clicar e ficar satisfeito, e isso só teste A/B mede.
 
 ## Limitações
 
@@ -68,7 +86,7 @@ Medidos de graça e localmente (OpenCV para cor, contraste e rosto; OCR RapidOCR
 - **Só views públicas.** Não temos CTR, retenção nem impressões (isso só o Studio de cada canal mostra).
 - **Sobrevivência:** pegamos os 100 vídeos longos mais recentes de cada canal com mais de 30 dias; vídeos apagados ou privados não entram.
 - **Detector de rosto simples** (erra rostos de perfil e desenhos). OCR erra textos estilizados.
-- **Gemini não rodou** (sem crédito); expressão, olhar, setas e estilo ficaram sem medir.
+- **Leitura por IA** em baixa resolução (miniatura 320x180): pode errar expressão e contar personagens como rostos; 6 imagens sem resposta válida. Não houve conferência manual de uma amostra.
 - **Shorts:** não analisados (a coleta pegou só a lista de vídeos longos; 26 vídeos com #shorts foram removidos).
 - **Idioma do áudio:** todos os vídeos da amostra final declaravam idioma, então não deu para comparar com quem não declara; dublagem (áudio em 2+ idiomas) só existia num subconjunto pequeno coletado por yt-dlp e ficou fora do modelo.
 - O modelo misto achou variação entre canais praticamente zero porque a nota já é relativa ao próprio canal; por isso usamos como principal a versão com margem de erro agrupada por canal, mais conservadora.
@@ -77,5 +95,6 @@ Medidos de graça e localmente (OpenCV para cor, contraste e rosto; OCR RapidOCR
 
 - `dados/dataset.parquet` (17.882 linhas, uma por vídeo, com todas as variáveis) e `dados/canais_selecionados.csv`.
 - `resultados/tabela_final.csv`: todos os 35 traços, com efeito no modelo misto e na versão conservadora, intervalos, q de Benjamini-Hochberg, sinal por nicho e efeito em PT e EN.
-- `graficos/01` a `08` (PNG).
-- `scripts/` na ordem: 01 candidatos, 02 seleção, 03_api coleta, 04_features, 04b miniaturas, 04c OCR (04c_thumbs_gemini.py pronto para quando houver crédito), 05 modelo, 06 descritivo.
+- `graficos/01` a `11` (PNG); 09 a 11 são da leitura por IA.
+- `resultados/gemini_*.csv` e `dados/thumbs_gemini.jsonl` (leitura por IA de cada miniatura).
+- `scripts/` na ordem: 01 candidatos, 02 seleção, 03_api coleta, 04_features, 04b miniaturas, 04c OCR, 04d leitura por IA pela Batch API (04c_thumbs_gemini.py é a versão de chamadas avulsas usada nos pilotos), 05 modelo, 06 descritivo, 07 miniaturas lidas por IA.
