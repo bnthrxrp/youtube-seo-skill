@@ -6,7 +6,7 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 
 ## PT-BR
 
-**O que é.** Um guia operacional para títulos, thumbnails, ganchos, descrição, tags, capítulos, pesquisa de palavra-chave, Shorts, multi-idioma, telas finais, cards, posts, lives, testes A/B, diagnóstico de queda de views e checklists de publicação. Pesquisa revisada em novembro de 2026 (117 fontes).
+**O que é.** Um guia operacional para títulos, thumbnails, ganchos, descrição, tags, capítulos, pesquisa de palavra-chave, Shorts, multi-idioma, telas finais, cards, posts, lives, testes A/B, diagnóstico de queda de views e checklists de publicação. Pesquisa revisada em novembro de 2026 (133 fontes; lacunas verificadas em fonte primária na v2.1).
 
 **Arquivos**
 - `SKILL.md`: a skill (frontmatter + corpo).
@@ -14,6 +14,7 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 - `HISTORICO.md`: linha do tempo do sistema de 2008 a 2026.
 - `DIVERGENCIAS.md`: onde praticantes e o YouTube discordam.
 - `GITHUB_SKILLS.md`: levantamento de skills parecidas.
+- `VERIFICACAO_LACUNAS.md`: vereditos das lacunas (confirmado, parcial, desmentido, sem fonte primária).
 
 **Instalar**
 - Claude Code: copie a pasta para `~/.claude/skills/youtube-seo/` (pessoal) ou `.claude/skills/youtube-seo/` (projeto).
@@ -30,7 +31,7 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 
 ## English
 
-**What it is.** An operational guide for titles, thumbnails, hooks, descriptions, tags, chapters, keyword research, Shorts, multi-language audio, end screens, cards, posts, live streams, A/B tests, view-drop diagnosis and publishing checklists. The skill is written in Brazilian Portuguese. Research reviewed November 2026 (117 sources).
+**What it is.** An operational guide for titles, thumbnails, hooks, descriptions, tags, chapters, keyword research, Shorts, multi-language audio, end screens, cards, posts, live streams, A/B tests, view-drop diagnosis and publishing checklists. The skill is written in Brazilian Portuguese. Research reviewed November 2026 (133 sources; gaps checked against primary sources in v2.1).
 
 **Install**
 - Claude Code: copy the folder to `~/.claude/skills/youtube-seo/` (personal) or `.claude/skills/youtube-seo/` (project).

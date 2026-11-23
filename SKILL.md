@@ -5,7 +5,7 @@ description: 'Use quando pedirem SEO de YouTube, título, thumbnail, descrição
 
 # YouTube SEO e descoberta (long-form e Shorts), com evidência rotulada
 
-Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026.
+Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`).
 
 ## Índice
 
@@ -21,7 +21,7 @@ Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTu
 9. Metadados: descrição, tags, hashtags, capítulos, idioma, legendas
 10. Retenção e estrutura de roteiro
 11. Playbook de Shorts
-12. Playlists, telas finais, cards, posts, lives, collabs, Hype
+12. Playlists, telas finais, cards, posts, lives, collabs, Hype, notificações, YPP
 13. Multi-idioma e dublagem
 14. Canal novo (cold start)
 15. Analytics (Insights) e diagnóstico de queda
@@ -141,7 +141,7 @@ Nenhum sinal sozinho decide, e o peso de cada um varia por pessoa, superfície e
 | S2 | Tempo assistido (absoluto e relativo) | Duração média e % médio assistido; watch time absoluto e relativo à duração. | [OFICIAL] F04, F09, F48 |
 | S3 | Satisfação (pesquisas) | Pesquisas pós-exibição (1 a 5 estrelas; só 4-5 contam como "valued watchtime"); o sistema prevê respostas para quem não respondeu. | [OFICIAL] F35, F48 |
 | S4 | Likes, dislikes, compartilhamentos, comentários | Sinais de satisfação; desligar comentários não pune. | [OFICIAL] F35, F48 |
-| S5 | "Não tenho interesse" / ignorar | Sinal negativo. | [OFICIAL] F09 |
+| S5 | "Não tenho interesse" / "Não recomendar o canal" / ignorar | Sinais negativos. Em Shorts o dislike foi aposentado em 25/06/2026 e o coração substituiu o like; o feedback negativo agora passa por esses controles. | [OFICIAL] F09, F10, F120 |
 | S6 | Relevância (busca) | Título, descrição, tags, conteúdo do vídeo vs. a consulta. | [OFICIAL] F01 |
 | S7 | Qualidade e autoridade | Expertise, autoridade, confiabilidade; avaliadores externos; mais peso em notícias e temas sensíveis. | [OFICIAL] F01, F45, F35 |
 | S8 | Contexto | Hora, dispositivo, sessão, idioma, o vídeo que acabou de ver. | [OFICIAL] F48, F08 |
@@ -260,6 +260,10 @@ A ideia é a maior alavanca. Otimizar metadados de uma ideia sem demanda rende p
 - **Playlists de estudo.** Guardar exemplos separados: outliers, thumbnails ótimas, títulos ótimos, intros ótimas. [PRATICANTE] Paddy via F87
 - **Regra dos 80%.** Maior parte da produção em formatos já provados, uma parte em experimentos. Proporção exata é do praticante. [PRATICANTE] Paddy via F87; Paddy também fala em reservar cota de experimentação F88
 - **Não seja original no pacote.** Procurar pistas do que já funciona e adaptar; originalidade na execução. [PRATICANTE] Ed Lawrence F89. Atenção: em Shorts, re-upload sem transformação perde alcance (F34). Adaptar formato ≠ copiar conteúdo.
+- **"Home run" por mês ou trimestre.** Um vídeo com ideia mais ampla (iniciantes e experts, fãs e casuais), mais tempo de gravação, mais variantes de pacote e orçamento maior, visto como "loss leader" que sobe o piso do canal. [PRATICANTE] Paddy Galloway F127
+- **Tempo onde está a alavanca.** Para Paddy, ideia + título + thumbnail são "pelo menos 50%" do desempenho, mas a maioria dos creators gasta ~5% do tempo nisso (opinião dele, sem medida). [PRATICANTE] F126
+- **Vantagem competitiva e "stakes".** Filtrar ideias por "qualquer um poderia dizer isso?"; dar algo em jogo ao espectador (consequência, inimigo) mesmo em vídeo educativo. [PRATICANTE] F126
+- **Troque "algoritmo" por "público".** Frase que Paddy atribui a Todd, do YouTube. [PRATICANTE] F126; coerente com [OFICIAL] F48
 - **Menos vídeos, maiores.** Caso Noah Kagan: reduzir frequência e mirar ideias com potencial maior. [PRATICANTE] Paddy F88
 - **Refazer sucessos antigos.** [OFICIAL-LIAISON] F60
 
@@ -322,6 +326,8 @@ Oficial [OFICIAL]:
 Praticantes [PRATICANTE]:
 - "Glance test": entender em um olhar. Paddy F88
 - Pouco texto; texto não repete o título. TubeBuddy F79, F81
+- Regras de bolso de Paddy Galloway: entender título + thumbnail em menos de 1 segundo; títulos com menos de 60 caracteres (só passar quando necessário); texto de thumbnail com menos de 5 palavras; 1 a 3 áreas de foco; checar se o texto não se perde no fundo; fazer muitas variantes (clientes dele fazem 10+ thumbnails por vídeo). [PRATICANTE] F126
+- Pacote em 3 etapas: parar o scroll (geralmente a thumbnail), criar interesse (lacuna de curiosidade), converter no clique (proposta de valor crível). [PRATICANTE] Paddy F127
 - Um foco visual; contraste; legível no celular e na TV. Consenso de praticantes F79, F81, F75
 - Fórmulas de texto curto ("ERREI", "DIA 30", "Certo x Errado"). TubeBuddy F81
 - Rosto ajuda com fãs, mas nem sempre com estranhos; estratégia de Dynamic Thumbnails com uma versão com rosto (fãs) e outra sem (novos). [PRATICANTE] @NickBYT_ no X F114. O oficial confirma que o efeito do rosto muda por público. [OFICIAL] F49
@@ -401,13 +407,20 @@ Nunca inventar volume de busca. Sem ferramenta, dizer "volume não medido; evid�
 | Legendas corretas | Conteúdo legível | [INFERÊNCIA] |
 | Tags | Só variações e erros de grafia | [OFICIAL] F03 |
 
-### 8.5 Ask YouTube (busca conversacional)
+### 8.5 Filtros de busca do espectador (desde 08/01/2026) [OFICIAL] F118
+
+- O menu "Ordenar por" virou "Priorizar", com Relevância (padrão) e Popularidade. "Popularidade" substituiu "Contagem de visualizações" e usa views mais sinais como watch time para aquela consulta.
+- Foram removidos "Última hora" e "Classificação". Recentes só por filtro de data (Hoje, Esta semana, Este mês, Este ano), não por ordenação. A remoção da ordenação por data não é dita literalmente no post; é o que a interface mostra e o que usuários reclamam.
+- Novo filtro de tipo "Shorts", que separa Shorts e vídeos longos.
+- Implicação: ser o vídeo mais novo não basta para aparecer primeiro; relevância e engajamento para a consulta decidem. Para notícias, o termo e a data no título ajudam o espectador que usa o filtro de data. [INFERÊNCIA]
+
+### 8.6 Ask YouTube (busca conversacional)
 
 - Conta como busca nas métricas (impressões, views, monetização). [OFICIAL] F55
 - Para aparecer: títulos relevantes, descrições detalhadas, capítulos. [OFICIAL] F55
 - Implicação: descrição curta demais agora é desperdício. [INFERÊNCIA]
 
-### 8.6 Busca no Brasil e em PT-BR
+### 8.7 Busca no Brasil e em PT-BR
 
 - Escrever termos como o brasileiro digita (ex.: "como fazer", "vale a pena", "melhor celular até 2 mil"). [INFERÊNCIA]
 - Testar variantes com e sem acento no autocomplete; usar a variante comum no título e a outra em tags. [INFERÊNCIA] coerente com "tags ajudam em grafias" F03
@@ -524,9 +537,13 @@ Regra: duração = o tempo necessário para cumprir a promessa com ritmo. [INFER
 ### 11.1 Fatos oficiais
 
 - Vídeos quadrados ou verticais de até 3 minutos (enviados desde 15/10/2024) são Shorts. [OFICIAL] F26, F39
-- Shorts com mais de 1 minuto e qualquer reivindicação de Content ID podem ser bloqueados. [PRATICANTE] goviraldev F72 (reconferir na F26)
-- Sinais citados: % que escolheu ver (vs. deslizar), duração média, % médio; personalização inclusive por áudio em alta. [OFICIAL] F10 via F72
-- Superfícies: feed de Shorts, Home, Inscrições, Busca, páginas de áudio e hashtag, Tendências. [OFICIAL] F10 via F72
+- Short com mais de 1 minuto e qualquer reivindicação de copyright ativa (inclusive manual) é bloqueado globalmente: não toca, não é recomendado, não monetiza. Não há penalidade ao canal; resolvida a reivindicação, volta. Abaixo de 1 minuto, nada muda. [OFICIAL] F26, F124
+- Música: a biblioteca de áudio de Shorts libera a maioria das faixas por até 90 s num Short de 3 min (algumas 60 ou 30 s); música royalty-free da Audio Library não gera Content ID. [OFICIAL] F26, F124
+- Cortar o próprio long-form em Short é endossado: ferramenta "Edit into a Short" (até 60 s, com link de volta ao original; sem música da Audio Library nesse fluxo). [OFICIAL] F123, F51
+- Link "vídeo relacionado" no player de Shorts exige recursos avançados. [OFICIAL] F132, F31
+- Botão "Get feedback" analisa gancho e ritmo antes de publicar. [OFICIAL] F33, F116
+- Sinais citados: % que escolheu ver (vs. deslizar), duração média, % médio; personalização inclusive por áudio em alta. [OFICIAL] F10
+- Superfícies: feed de Shorts, Home, Inscrições, Busca, páginas de áudio e hashtag, Tendências. [OFICIAL] F10
 - Sem cadência mínima de postagem. [OFICIAL] F10
 - Desempenho de Shorts não prejudica a recomendação de long-form. [OFICIAL] F10, F51 (ver D5)
 - Views de Shorts contam cada início/replay desde 31/03/2025; engaged views seguem para YPP. [OFICIAL] F25, F38
@@ -544,7 +561,7 @@ Regra: duração = o tempo necessário para cumprir a promessa com ritmo. [INFER
 2. **1-3 s:** promessa ou tensão explícita.
 3. **Desenvolvimento:** um único ponto, sem introdução.
 4. **Final:** payoff + loop (o fim conecta ao começo) ou CTA para o long-form relacionado. Loop é prática de praticantes. [PRATICANTE]
-5. **Áudio:** áudio em alta pode personalizar distribuição. [OFICIAL] F10. Música com copyright em Short > 1 min pode bloquear (F72).
+5. **Áudio:** áudio em alta pode personalizar distribuição. [OFICIAL] F10. Música com reivindicação em Short > 1 min bloqueia o Short (F26); use a biblioteca de áudio de Shorts (F124).
 
 ### 11.3 Shorts → long-form [OFICIAL] F51
 
@@ -557,11 +574,11 @@ Regra: duração = o tempo necessário para cumprir a promessa com ritmo. [INFER
 
 | Sintoma | Leitura | Fonte |
 |---|---|---|
-| "Shown in feed" alto, "chose to view" baixo | Primeiro segundo fraco | [OFICIAL] F10/F72 |
+| "Shown in feed" alto, "chose to view" baixo | Primeiro segundo fraco | [OFICIAL] F10 |
 | Bom % visto mas pouca distribuição | Tema/público estreito, ou originalidade | [OFICIAL] F34; [INFERÊNCIA] |
-| Zero impressões no feed de repente (relatos 13-14/11/2026) | Sem explicação oficial; relatos no X | [PRATICANTE] F102 |
+| Zero impressões no feed de repente (relatos 13-14/11/2026) | Sem incidente oficial: nenhum Known Issue; TeamYouTube responde com texto padrão (personalização, "fluctuating Shorts views", originalidade). Checar originalidade, recursos do canal, privacidade e Made for Kids | [PRATICANTE] F102; [OFICIAL] F130, F131, F34 |
 | Inscritos de Shorts não assistem long-form | Composição de público, não penalidade | D5 |
-| Corte do próprio long-form perde alcance | Lacuna oficial; transformar o corte | D15 |
+| Corte do próprio long-form perde alcance | Não há penalidade oficial para cortes próprios; o problema provável é o Short não se sustentar sozinho | [OFICIAL] F123, F51, F34 (D15) |
 
 ### 11.5 Ideias de formato [PRATICANTE] TubeBuddy F81
 
@@ -569,7 +586,7 @@ Mito x verdade; erro x jeito certo; "Dia N de..."; resposta a comentário; antes
 
 ---
 
-## 12. Playlists, telas finais, cards, posts, lives, collabs, Hype
+## 12. Playlists, telas finais, cards, posts, lives, collabs, Hype, notificações, YPP, notificações, YPP
 
 ### 12.1 Playlists [OFICIAL] F02, F20
 
@@ -599,6 +616,7 @@ Mito x verdade; erro x jeito certo; "Dia N de..."; resposta a comentário; antes
 ### 12.5 Lives [OFICIAL] F32, F51, F43
 
 - Lives verticais aparecem no feed de Shorts. F51
+- Por padrão, uma live do Live Control Room sai em 16:9 e 9:16 ao mesmo tempo (a vertical é um corte central, com layouts alternativos). A vertical pode ser achada por quem navega em Shorts, não só por inscritos. Requisitos: 16 anos ou mais e canal verificado. F32
 - Live showdowns e auto-dub em live anunciados no Made On 2026. F43
 - Gravações de live podem entrar em A/B de título/thumbnail (estreias e lives agendadas não). F27
 - Título de live: o tema, não "LIVE #87". Corte dos melhores trechos em vídeos/Shorts originais. [INFERÊNCIA]
@@ -613,6 +631,21 @@ Mito x verdade; erro x jeito certo; "Dia N de..."; resposta a comentário; antes
 - Canais do YPP com 500 a 500.000 inscritos; vídeos long-form de até 7 dias.
 - Bônus de pontos maior para canais menores; leaderboard não personalizado, atualizado a cada poucos minutos; Brasil incluído.
 - Pedir hype ao público nos primeiros dias faz sentido para canal pequeno; efeito em recomendação não documentado. [INFERÊNCIA]
+
+### 12.8 Notificações [OFICIAL] F119
+
+- Desde 21/04/2026 não há push no celular para inscritos "Todas" inativos: os que não assistem o canal há cerca de 1 mês e ignoraram as notificações recentes. Eles seguem recebendo na caixa de entrada e voltam a receber push quando assistem de novo.
+- Canal que ficou parado não é afetado, porque não houve notificação para ignorar.
+- "Notificações do sino enviadas" pode cair sem queda de views.
+- Máximo de 3 notificações de vídeo em 24 horas. Publicar mais de 3 vídeos em sequência curta faz o resto não notificar.
+- Inscrição não é alcance: o feed de Inscrições é pequeno e Sugeridos é onde inscritos mais assistem. [OFICIAL] F48
+
+### 12.9 Monetização: requisitos do YPP a partir de 01/02/2027 (contexto) [OFICIAL] F121, F122
+
+- Novos candidatos (anúncios e Premium): 1.000 inscritos e 8.000 horas qualificadas em 365 dias, ou 20 mi de views qualificadas de Shorts em 90 dias. Quem já está no programa não sai.
+- Receita do pool de Shorts: manter 10 mi de views qualificadas de Shorts em 90 dias.
+- Recursos de fã e de shopping seguem com 500 inscritos e 3.000 horas, ou 3 mi de views de Shorts.
+- Implicação para SEO: views públicas infladas (seção 15.1) não contam; o YPP usa views e horas "qualificadas". [OFICIAL] F121, F38
 
 ---
 
@@ -630,7 +663,10 @@ Mito x verdade; erro x jeito certo; "Dia N de..."; resposta a comentário; antes
 
 ### 13.2 Praticante
 
-- "3 a 4x views" com dublagem. [PRATICANTE] Mario Joos F84. Expectativa realista: usar o número oficial (D6).
+- "Up to 300-400% extra views" com dublagem; canais de personalidade 30-50%. Ele recomenda desligar a dublagem automática e usar dublagem paga revisada. [PRATICANTE] Mario Joos F84
+- Caso oficial isolado: faixas dubladas do Jamie Oliver com "three times more views". [OFICIAL] F125
+- Expectativa: planejar com a média oficial (> 25% do watch time de idiomas não principais) e tratar 3x como caso favorável (D6, D18).
+- A dublagem automática pode ser desligada ou posta em "Publicar manualmente" para revisar antes; as faixas automáticas não são editáveis. [OFICIAL] F13
 
 ### 13.3 Plano [INFERÊNCIA]
 
@@ -675,7 +711,7 @@ Plano dos 10 primeiros vídeos [INFERÊNCIA + PRATICANTE]:
 | 16/11/2026 | Co-views (pessoas extras na TV) na contagem pública | Totais antigos e novos não comparáveis | F66, F22, F82 |
 | 13/11/2026 | Analytics vira Insights; aba Research | Nomes e telas mudaram; avançado e tempo real seguem | F57, F65 |
 
-Exemplo de magnitude: Rene Ritchie mostrou um vídeo com ~33 mil views e ~14 mil engaged views após a mudança. [OFICIAL-LIAISON] F67 (síntese). Regra: **para comparar períodos, use engaged views e watch time, não views públicas.** [INFERÊNCIA] baseada em F38
+Exemplos de magnitude: num vídeo do vidIQ Podcasts, poucas horas após publicar, ~33 mil views vs ~14 mil engaged views [PRATICANTE] F67; Paddy Galloway mediu aumento médio de 30-50% nas views públicas (até 100%+, maior em canais com muito Browse) numa dúzia de canais [PRATICANTE] F128. O YouTube não publica percentual. Regra: **para comparar períodos, use engaged views e watch time, não views públicas.** [INFERÊNCIA] baseada em F38
 
 ### 15.2 Métricas e como ler
 
@@ -697,7 +733,7 @@ Olhe 90 dias e compare com o mesmo período do ano anterior para sazonalidade. [
 
 1. **É queda real?** Compare engaged views e watch time (15.1). Mudança de contagem não é queda.
 2. **Qual período?** 90 dias e ano anterior (sazonalidade). F15, F29
-3. **Qual fonte caiu?** Busca (tema perdeu demanda ou concorrência subiu, F61), Browse (pacote/ideia), Sugeridos (vídeos vizinhos mudaram), Shorts feed (originalidade? F34), notificações (menos para inativos, F73).
+3. **Qual fonte caiu?** Busca (tema perdeu demanda ou concorrência subiu, F61), Browse (pacote/ideia), Sugeridos (vídeos vizinhos mudaram), Shorts feed (originalidade? F34), notificações (desde 21/04/2026 não há push para inscritos "Todas" inativos; "Bell notifications sent" pode cair sem queda de views, F119).
 4. **Impressões ou CTR?** Impressões caíram com CTR estável: o sistema achou menos gente interessada (tema ou satisfação). CTR caiu com impressões subindo: normal (público mais frio, F16). CTR caiu com impressões estáveis: pacote.
 5. **Retenção mudou?** Intro e AVD contra os 10 últimos vídeos de duração parecida (F28).
 6. **Qual público?** Perdeu novos (ideias pouco amplas) ou regulares (mudou o conteúdo que o fã queria)? F29, F15
@@ -771,13 +807,16 @@ Não diagnostique com um vídeo só; separe formato x tema x distribuição. [PR
 | > 25% do watch time de idiomas não principais (multi-idioma) | YouTube F12, F40 | [OFICIAL] |
 | Collab: +30% (parceiro ~30x maior) / +25% (porte similar), 1ª semana | YouTube F52 | [OFICIAL] |
 | 90% dos vídeos de melhor desempenho com thumbnail personalizada | YouTube F05 | [OFICIAL] |
-| ~33 mil views vs ~14 mil engaged views em um vídeo | Rene Ritchie F67 | [OFICIAL-LIAISON], caso único |
+| ~33 mil views vs ~14 mil engaged views em um vídeo | vidIQ Podcasts F67 | [PRATICANTE], caso único |
+| Views públicas +30-50% em média (até 100%+) após 24/08/2026 | Paddy Galloway F128 | [PRATICANTE], ~12 canais |
+| Faixas dubladas com 3x mais views (Jamie Oliver) | YouTube F125 | [OFICIAL], caso único |
+| Máximo de 3 notificações de vídeo por 24h | TeamYouTube F119 | [OFICIAL] |
 | Views de Shorts ~+70% após mar/2025 | Euronews citando números do YouTube F100 | [PRATICANTE] (imprensa) |
 | Média de 14:50 na 1ª página da busca | Backlinko 2017 F90 | [PRATICANTE], antigo |
 | 10% dos vídeos com 79% das views (canais grandes) | Pew 2019 F91 | [PRATICANTE] (estudo), antigo |
 | CTR por fonte (busca ~12,5%, sugeridos ~9,5%, browse ~3,5%) | Focus Digital via repos F105/F107 | [PRATICANTE] sem método aberto; não usar como meta (D4) |
 | AVD média de mercado ~23,7% | Retention Rabbit via F105 | [PRATICANTE] sem método aberto |
-| "3 a 4x views" com dublagem | Mario Joos F84 | [PRATICANTE], caso (D6) |
+| "Até 300-400% extra views" com dublagem | Mario Joos F84 | [PRATICANTE], sem método (D6) |
 | "AVD < 40% = despriorizado" | F105 | Contradiz o oficial (D3); não usar |
 
 ---
@@ -833,7 +872,7 @@ Metadados
 Shorts
 - [ ] Primeiro segundo forte; um ponto só; loop ou link de vídeo relacionado (F47, F51).
 - [ ] Conteúdo original (não re-upload, não só VO descrevendo) (F34, F55).
-- [ ] Música: risco de bloqueio em Short > 1 min com Content ID (F72).
+- [ ] Short > 1 min: nenhuma reivindicação de copyright (senão é bloqueado); música da biblioteca de áudio de Shorts (F26, F124).
 
 ### 19.2 Primeiras 24 horas
 
@@ -911,13 +950,14 @@ Para Shorts, troque os blocos 3 a 7 por: quadro inicial (0-1 s), texto na tela, 
 
 ## 21. Fontes principais
 
-Lista completa (117 IDs, com URL, data, nível e o que cada uma afirma) em `FONTES.md`. As mais usadas:
+Lista completa (133 IDs, com URL, data, nível e o que cada uma afirma) em `FONTES.md`. As mais usadas:
 
 - Oficial, sistema: F01 (busca), F02, F03, F08 (recomendação), F09/F10 (dicas de descoberta long-form/Shorts), F15 (saúde do canal), F16 (CTR), F35 (Goodrow 2021), F45 (howyoutubeworks).
 - Oficial, ferramentas: F17 (capítulos), F18 (telas finais), F19 (cards), F21 (posts), F27 (A/B), F28 (retenção), F12/F13 (idiomas), F14 (Hype), F22 (métricas), F38 (engaged views).
 - Creator Insider: F48 (Todd Beaupré 2026), F49 (Chucky), F51 (Shorts → long), F52 (collabs), F53 (dublagem), F55 (Ask YouTube, originalidade), F57 (Research/Insights).
 - Liaison: F58-F66, F116-F117.
+- Comunidade/TeamYouTube (v2.1): F118 (filtros de busca), F119 (notificações), F130-F131 (Shorts, Known Issues); blog F120 (Shorts sem dislike), F121/F122 (YPP 2027), F125 (caso de dublagem).
 - Papers: F68-F71.
-- Praticantes: Paddy Galloway F87/F88, Ed Lawrence F89, vidIQ F74-F78, TubeBuddy F79-F83, Backlinko F90, Pew F91-F93.
+- Praticantes: Paddy Galloway F87/F88/F126-F129, Ed Lawrence F89, vidIQ F74-F78, TubeBuddy F79-F83, Backlinko F90, Pew F91-F93.
 
-Histórico: `HISTORICO.md`. Divergências: `DIVERGENCIAS.md`. Levantamento de skills similares: `GITHUB_SKILLS.md`.
+Histórico: `HISTORICO.md`. Divergências: `DIVERGENCIAS.md`. Vereditos das lacunas: `VERIFICACAO_LACUNAS.md`. Levantamento de skills similares: `GITHUB_SKILLS.md`.
