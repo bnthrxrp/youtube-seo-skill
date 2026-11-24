@@ -1,11 +1,11 @@
 ---
 name: youtube-seo
-description: 'Use quando pedirem SEO de YouTube, título, thumbnail, descrição, tags, capítulos, diagnóstico de queda de views, experimento de pacote ou checklist de publicação (long-form e Shorts), com evidência separada em oficial, praticante e inferência.'
+description: 'Use quando pedirem SEO de YouTube, título, thumbnail, descrição, tags, capítulos, avaliação de uma ideia de vídeo longo, diagnóstico de queda de views, experimento de pacote ou checklist de publicação (long-form e Shorts), com evidência separada em oficial, praticante, estudo próprio e inferência.'
 ---
 
 # YouTube SEO e descoberta (long-form e Shorts), com evidência rotulada
 
-Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`. v2.2: estudo próprio com 17.882 vídeos, seção 17B e pasta `estudo-10k/`. v2.3: CLI local `youtube-seo`, seção 8.8).
+Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTube. Toda afirmação traz o nível de evidência e o ID da fonte (Fxx). A lista completa de fontes está em `FONTES.md`, a linha do tempo em `HISTORICO.md` e os conflitos entre praticantes e o YouTube em `DIVERGENCIAS.md`, todos na mesma pasta desta skill. Última revisão da pesquisa: 23/11/2026 (v2.1: lacunas da v2 verificadas em fonte primária; vereditos em `VERIFICACAO_LACUNAS.md`. v2.2: estudo próprio com 17.882 vídeos, seção 17B e pasta `estudo-10k/`. v2.3: CLI local `youtube-seo`, seção 8.8. v2.4: laboratório de 26.194 vídeos longos de 310 canais, seção 17C e `docs/research/`, com o subcomando offline `youtube-seo advise`, alias `idea`. v2.5: auditoria sênior com errata em `docs/research/ERRATA_E_LIMITES.md`, motor reescrito com trava de evidência q < 0,05, ranking revisado e seção 17C.5).
 
 ## Índice
 
@@ -28,6 +28,7 @@ Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTu
 16. Experimentos: A/B de título e thumbnail, Video A/B, Dynamic Thumbnails
 17. Benchmarks de praticantes (rotulados)
 17B. Evidência do estudo próprio (17.882 vídeos, 203 canais) [ESTUDO-PRÓPRIO]
+17C. Laboratório ampliado (26.194 vídeos, 310 canais) e Idea Advisor [ESTUDO-PRÓPRIO]
 18. Mitos e divergências
 19. Checklists: pré-publicação, 24h, 48h, 7/28/90 dias
 20. Template de entrega
@@ -51,7 +52,8 @@ Skill para planejar, empacotar, publicar, diagnosticar e testar vídeos no YouTu
 | "Checklist de publicação" | 19 | Checklist preenchido |
 | "Dublar / outro idioma" | 13 | Plano de idiomas |
 | "Roteiro" / "gancho" / "retenção caiu no início" | 10, 7.4 | Estrutura de roteiro + 3 ganchos |
-| "O que funciona em título/thumb/descrição segundo dados?" | 17B, 7, 9 | Resposta com efeito e margem do estudo próprio |
+| "O que funciona em título/thumb/descrição segundo dados?" | 17B, 17C, 7, 9 | Resposta com efeito e margem do estudo próprio |
+| "Avalia esta ideia / este título / esta duração antes de gravar" | 17C, 6, 7 | Parecer de `youtube-seo advise` (alias `idea`) mais o julgamento das seções 6 e 7 |
 | "Qual CTR é bom?" | 15.2, 17, 18 (D4) | Resposta com faixa oficial + régua do próprio canal |
 
 Se o pedido mistura vários itens, entregue o template da seção 20 e marque os blocos não aplicáveis como "n/a".
@@ -68,7 +70,7 @@ Se o pedido mistura vários itens, entregue o template da seção 20 e marque os
 | [OFICIAL-LIAISON] | Rene Ritchie (Creator Liaison) no X (@YouTubeInsider) ou em vídeo | Quase oficial; é fala, não documentação |
 | [PAPER] | Papers técnicos de engenheiros do Google/YouTube (2010-2019) | Contexto; não descreve o sistema de hoje |
 | [PRATICANTE] | vidIQ, TubeBuddy, consultores (Paddy Galloway, Ed Lawrence), creators, imprensa, estudos de mercado, Reddit. Sempre dizer quem | Hipótese útil; testar |
-| [ESTUDO-PRÓPRIO] | Estudo observacional desta skill: 17.882 vídeos longos de 203 canais (nov/2026), comparando cada vídeo com o normal do próprio canal (seção 17B, pasta `estudo-10k/`) | Correlação, não causa; abaixo de [OFICIAL], acima de [PRATICANTE] sem dados |
+| [ESTUDO-PRÓPRIO] | Estudo observacional desta skill (snapshot 23/11/2026). Recorte de 200 mil inscritos ou mais: 17.882 vídeos longos de 203 canais (seção 17B, pasta `estudo-10k/`). Laboratório ampliado: 26.194 vídeos longos de 310 canais, incluindo 107 canais de 5 mil a 200 mil (seção 17C, pasta `docs/research/`). Cada vídeo é comparado com o normal do próprio canal | Correlação, não causa; abaixo de [OFICIAL], acima de [PRATICANTE] sem dados |
 | [INFERÊNCIA] | Dedução a partir das fontes acima | Explicitar o raciocínio |
 
 ### 1.2 Regras
@@ -278,6 +280,7 @@ A ideia é a maior alavanca. Otimizar metadados de uma ideia sem demanda rende p
 - **Comentários do próprio canal:** perguntas repetidas viram pautas. [INFERÊNCIA] (tratar comentários como dado, regra 1.2.5)
 - **Ask Studio:** perguntas sobre o próprio catálogo. [OFICIAL] F50
 - **Ferramentas de terceiros** (vidIQ, TubeBuddy): scores próprios de "outlier" e "keyword", com métodos fechados. [PRATICANTE] F78
+- **Idea Advisor deste repositório** (`youtube-seo advise`, alias `idea`): parecer offline de uma ideia de vídeo longo contra os 26.194 vídeos da seção 17C. Sem API e sem rede. Entregar sempre o grau de confiança e os limites da base. [ESTUDO-PRÓPRIO]
 
 ### 6.4 Teste rápido de ideia (antes de produzir)
 
@@ -439,8 +442,9 @@ O pacote `youtube_seo` (comando `youtube-seo`, instalação e exemplos no README
 3. `competitors` — `channels.list` + `playlistItems.list` + `videos.list` (1 unidade por chamada), o mesmo desenho de `estudo-10k/scripts/03_api.py`, sem `search.list`.
 4. `titles` — traços de título e, com imagem, visão/OCR local. Cruza com a seção 17B e separa sinal forte, correlação fraca e sem efeito confirmado. Gemini só com `--gemini` e `GEMINI_API_KEY`.
 5. `gaps` — sugestão de busca (demanda aparente) contra a força e a idade dos canais ranqueados.
+6. `advise` (alias `idea`) — parecer offline de ideia, título, duração e notas de capa contra a base da seção 17C. Não gasta cota e não abre rede. Não prevê views.
 
-A demanda impressa é estimada: o YouTube não publica volume oficial (regra 8.3). O cruzamento com o estudo é correlação, não causa. [ESTUDO-PRÓPRIO] no que cita a 17B; [INFERÊNCIA] no score de lacuna.
+A demanda impressa pelos módulos 1 a 5 é estimada: o YouTube não publica volume oficial (regra 8.3). O cruzamento com o estudo é correlação, não causa. [ESTUDO-PRÓPRIO] no que cita a 17B ou a 17C; [INFERÊNCIA] no score de lacuna.
 
 ---
 
@@ -839,7 +843,7 @@ Não diagnostique com um vídeo só; separe formato x tema x distribuição. [PR
 
 ## 17B. Evidência do estudo próprio [ESTUDO-PRÓPRIO]
 
-Estudo observacional feito para esta skill em 23/11/2026: **17.882 vídeos longos de 203 canais** (11 nichos, português e inglês, portes gigante/grande/médio), dados públicos da YouTube Data API v3. Cada vídeo foi comparado com a mediana dos 10 vídeos do mesmo canal publicados mais perto dele (views do vídeo ÷ normal do canal), com controle de idade, nicho, idioma, porte, categoria e hora. Modelo de efeitos mistos e versão conservadora dentro do canal com erro agrupado por canal; correção de Benjamini-Hochberg para 35 traços; estabilidade checada por nicho e idioma; validação fora da amostra por grupos de canais. Detalhes, gráficos, dados e scripts em `estudo-10k/` (RESULTADOS.md). Números abaixo: versão conservadora, intervalo de 95%.
+Estudo observacional feito para esta skill em 23/11/2026: **17.882 vídeos longos de 203 canais** (11 nichos, português e inglês, portes gigante/grande/médio), dados públicos da YouTube Data API v3. Este recorte de 200 mil inscritos ou mais é a base maior do laboratório ampliado na seção 17C (26.194 vídeos, 310 canais, com mais 8.312 vídeos de 107 canais entre 5 mil e 200 mil inscritos). Cada vídeo foi comparado com a mediana dos 10 vídeos do mesmo canal publicados mais perto dele (views do vídeo ÷ normal do canal), com controle de idade, nicho, idioma, porte, categoria e hora. Modelo de efeitos mistos e versão conservadora dentro do canal com erro agrupado por canal; correção de Benjamini-Hochberg para 35 traços; estabilidade checada por nicho e idioma; validação fora da amostra por grupos de canais. Detalhes, gráficos, dados e scripts em `estudo-10k/` (RESULTADOS.md). Números abaixo: versão conservadora, intervalo de 95%.
 
 **Como usar:** é correlação, não causa. Use para priorizar o que testar (seção 16) e para desmontar mitos, nunca como promessa de resultado. Shorts não foram analisados.
 
@@ -893,7 +897,141 @@ Duas medições: local (OpenCV/OCR) e leitura por IA (Gemini 3.5 Flash-Lite em 1
 
 ### 17B.5 Limitações
 
-Correlação, não causa; só views públicas (sem CTR, impressões, retenção); detector de rosto simples, OCR local e leitura por IA em baixa resolução sem conferência manual; 100 vídeos longos mais recentes por canal com 30+ dias; 11 gigantes em português; Shorts, idioma do áudio e dublagem fora da análise.
+Correlação, não causa; só views públicas (sem CTR, impressões, retenção, origem de tráfego nem transcrições); detector de rosto simples, OCR local e leitura por IA em baixa resolução sem conferência manual; 100 vídeos longos mais recentes por canal com 30+ dias; 11 gigantes em português; Shorts, idioma do áudio e dublagem fora da análise. O laboratório da seção 17C repete esses limites e acrescenta os canais de 5 mil a 200 mil inscritos.
+
+---
+
+## 17C. Laboratório ampliado (26.194 vídeos, 310 canais) e Idea Advisor [ESTUDO-PRÓPRIO]
+
+Mesmo snapshot de 23/11/2026, agora com os canais menores: **26.194 vídeos longos de 310 canais**. São os 203 canais de 200 mil inscritos ou mais da seção 17B (17.882 vídeos) mais 107 canais de 5 mil a 200 mil inscritos (8.312 vídeos), 11 nichos, português e inglês. Relatório consolidado, relatórios de apoio, gráficos e ranking: `docs/research/` (`RELATORIO_FINAL_CONSOLIDADO.md`, `data/ranking_alavancas.csv`).
+
+**Como usar.** Correlação dentro do canal, não causa e não promessa de views. Priorize o que testar (seção 16) e o que descartar como mito. Quando a pessoa pedir para avaliar uma ideia, um título, uma duração ou uma capa antes de gravar, rode o Idea Advisor (17C.4) e entregue o grau de confiança junto com os limites. Shorts continuam fora da análise.
+
+### 17C.1 O que a base mede e o que ela não mede
+
+Desempenho, neste laboratório, é views do vídeo relativas à mediana do próprio canal (múltiplo, com e sem ajuste de idade). A base não tem:
+
+- CTR
+- impressões
+- retenção
+- tempo de exibição
+- origem de tráfego
+- inscritos ganhos por vídeo
+- transcrições
+- série diária de views (é um snapshot só)
+
+Título, capa, legenda e capítulos foram lidos no dia da coleta: quem edita depois de um estouro ou de um flop introduz causalidade reversa. Canais de 200 mil ou mais são sobreviventes; os pequenos vieram de vídeos recentes visíveis, não do canal pequeno típico. Benjamini-Hochberg vale dentro de cada bateria, não entre baterias. Duração carrega esforço de produção. Um breakout de 10x num canal pequeno pode ser poucos milhares de views.
+
+Perguntas que só o Studio responde, e que este laboratório deixa em aberto: se a capa aumentou o clique, se o público ficou até o fim, de onde veio o tráfego, se o vídeo é evergreen e se ele trouxe inscritos.
+
+### 17C.2 O que se sustenta dentro do canal
+
+Efeitos com controle de canal, intervalo de 95% e q de Benjamini-Hochberg. Prioridade no ranking revisado de `docs/research/data/ranking_alavancas_revisado.csv` (só a faixa `validada` vale como recomendação; `hipotese_ab` é teste A/B; `removida` não se usa). O ranking original `ranking_alavancas.csv` fica como registro histórico, sem a errata.
+
+| Alavanca | Porte | Efeito dentro do canal | Leitura |
+|---|---|---|---|
+| Dobrar a duração | 5 mil a 200 mil | +30,2% (+19,7% a +41,6%) | Único traço ligado a breakout de 10x nos menores |
+| Dobrar a duração | 200 mil ou mais | +14,9% | Replica o sinal da 17B (+14% na versão conservadora) |
+| 20 a 45 min contra 8 a 20 min | 200 mil ou mais | +25,1% (+17,6% a +33,0%) | Ótimo médio em 34 min (IC 28 a 43); retorno decrescente perto de 24 min. Tech cai depois de cerca de 30 min |
+| Menos de 5 min | 200 mil ou mais | −33,5% (−45,7% a −18,6%) | Evitar como formato principal |
+| +1 desvio padrão de novidade temática | 5 mil a 200 mil / 200 mil+ | −14,8% / −10,5% | Novidade não aumenta a chance de breakout |
+| +1 desvio padrão de desvio visual da capa | 5 mil a 200 mil / 200 mil+ | −10,9% / −7,4% | Manter o visual habitual do canal |
+| Menos de 2 dias desde o vídeo anterior | 200 mil ou mais | −8,8% (q = 0,003) | Nos 5 mil a 200 mil: −4,4%, q = 0,59, inconclusivo |
+| Menos de 3 dias depois de um fracasso | 200 mil ou mais | −17,8% | Esperar 3 dias ou mais |
+| Dobrar o volume semanal | 200 mil ou mais | −9,6% | Volume recente, não uma cadência mínima oficial |
+| Legenda enviada pelo canal | 200 mil ou mais | +28,6% (+15,3% a +43,4%) | Resiste ao controle de duração; risco de causalidade reversa. Nos menores, só 3,8% dos vídeos têm legenda |
+| Vocabulário abstrato no título | 200 mil ou mais | −15,4% (−22,9% a −7,9%) | Trocar por termo concreto |
+| Marca ou produto famoso no título | tech e games, 200 mil+ | +25,5% (+11,6% a +40,1%) | 35 canais |
+| 1ª pessoa no título | inglês, 200 mil+ | −11,0% | Em português, nulo |
+| Afirmação contraintuitiva | inglês, 200 mil+ | +14,2% | Em português, não confirmada |
+| Texto da capa alinhado ao título (+1 DP) | 200 mil ou mais | +4,1% | Repetir o título não é punido |
+
+Número no título (+15,4%) e uma palavra em caixa alta (+15,3%) aparecem nos canais de 5 mil a 200 mil com confiança baixa: a diferença contra os canais maiores não foi confirmada. Trate como teste A/B, não como regra.
+
+O porte muda a distribuição, e a ruptura não está em 200 mil inscritos. Pequeno (5 mil a 50 mil), emergente (50 mil a 200 mil) e médio (200 mil a 2 milhões) se parecem em concentração, volatilidade e anomalias (q de 0,35 a 0,98 na comparação com o médio). Grande e gigante, a partir de cerca de 2 milhões, concentram menos views no top 10% (−8,9 e −9,3 pontos percentuais contra o médio) e produzem cerca de metade das anomalias de 10x (12 por mil, contra cerca de 31 por mil nos menores).
+
+### 17C.3 O que não se sustenta
+
+Dentro do canal, estes sinais encolhem ou somem. A comparação ingênua entre canais infla vários deles.
+
+- Rosto grande na capa: +30,0% entre canais, −2,5% dentro do canal (IC −6,8% a +1,9%).
+- Expressão de surpresa, seta ou círculo, saturação alta, contraste alto, olhar para a câmera, número ou dinheiro na capa: nulos dentro do canal.
+- Comprimento de título, pergunta, lista, tutorial e mistério como gancho: intervalos cruzam zero.
+- Não há arquétipo de vídeo que vença o padrão do canal (18 ângulos, q ≥ 0,89).
+- Horário e dia de publicação: nada sobrevive à correção, salvo um sinal fraco de fim de semana só em canais médios.
+- Capítulos por si só, com controle de duração: +9,6% nos 200 mil ou mais, q = 0,40.
+- Momentum depois de um hit nos 200 mil ou mais: +2,4%, intervalo cruza zero. Nos canais menores, publicar o próximo no mesmo veio depois de um hit tem sinal fraco (+12,3%).
+- Imitar a cara de capa de canal grande não ajuda o pequeno (−2,6% por desvio padrão, q = 0,30).
+
+O teto preditivo é baixo, e isso é um achado. O texto do título explica no máximo R² 0,018 fora da amostra. Os embeddings da capa explicam R² 0,025 dentro do canal. O melhor modelo com 68 traços pré-publicação chega a R² 0,016 em canais nunca vistos e a AUC 0,58 para acertar o top 5% do próprio canal (0,50 é moeda). A volatilidade histórica do canal prevê o top 5% global com AUC 0,744, melhor do que todos os traços do vídeo juntos.
+
+### 17C.4 Idea Advisor (`youtube-seo advise`, alias `idea`)
+
+Motor offline em `youtube_seo/advisor/`. Lê só `knowledge_base.json` (biblioteca padrão, sem rede, sem API, sem cota). Aplica a seção 17C a uma ideia concreta e devolve sete blocos: diagnóstico com grau de confiança, duração, título, thumbnail e alinhamento título-capa, cadência, cinco exemplos reais parecidos (busca lexical nos títulos da base) e checklist. Exemplos de saída em `docs/research/advisor_examples/`.
+
+```bash
+youtube-seo advise --title "5 celulares baratos que valem a pena em 2026" --niche tech --lang pt \
+  --tier pequeno --duration-min 18 --thumb-notes "fundo escuro, produto em destaque, sem rosto" \
+  --days-since-last 5
+youtube-seo idea --title "50 Geography Facts You Won't Believe" --niche educacao --lang en \
+  --subscribers 19500 --duration-min 21 --format json
+```
+
+- `--tier`: `pequeno`, `emergente`, `medio`, `grande`, `gigante`. Sem `--tier`, `--subscribers` define o porte. Sem os dois, o padrão é pequeno (abaixo de 50 mil).
+- `--niche`: `culinaria`, `documentario`, `educacao`, `entretenimento`, `esportes`, `financas`, `games`, `historias`, `infantil`, `lifestyle`, `tech`. Alias em inglês (cooking, finance, kids) são aceitos. Nicho fora da lista encerra com erro.
+- `--lang`: `pt` ou `en`.
+- `--thumb-notes`: descrição livre da capa. Texto escrito na capa pode ir em `--thumb-text` ou depois de `texto:` nas notas.
+- `--days-since-last`, `--last-result` (`hit`, `flop`, `normal`) e `--recent-titles` (separados por `||`) alimentam cadência e consistência temática.
+- `--format json` devolve o parecer estruturado. O padrão é markdown no terminal. Este subcomando não grava a pasta `-o` e não abre cache.
+
+Regras ao entregar o parecer ao usuário:
+
+1. Repetir o grau de confiança e a cobertura da célula nicho × idioma × porte.
+2. Repetir os limites: sem CTR, impressões, retenção, origem de tráfego e transcrições. O parecer não prevê views e não promete viralização.
+3. Tratar sinais de confiança baixa (número e caixa alta nos canais menores, padrões raros de capa) como teste A/B da seção 16, não como regra.
+4. Não usar o parecer para diagnosticar queda de views: isso continua na seção 15 e exige Insights.
+5. `scripts/research/build_knowledge_base.py` regenera o JSON a partir das bases do laboratório (pandas e pyarrow). Essas bases brutas não estão no repositório.
+
+### 17C.5 Governança estatística do Idea Advisor (auditoria sênior, v2.5)
+
+Versão de trabalho em `docs/research/COMPLEMENTO_SKILL.md`. Conflitos entre relatórios antigos e esta seção se resolvem por `docs/research/ERRATA_E_LIMITES.md`. Nota da auditoria sobre o pacote: motor 8,8, governança 8,5, laboratório 7,7 de 10. O laboratório fica limitado pelos itens marcados PENDENTE DE REPROCESSAMENTO na errata (denominador de idade, vazamento temporal no alvo bilateral, canais pequenos contaminados), que exigem os dados brutos, ausentes do repositório.
+
+Esta skill traduz achados econométricos de **26.194 vídeos longos em 310 canais** (modelos de efeito fixo intra-canal). O laboratório **não possui dados de CTR, impressões, retenção (AVD/APV), fontes de tráfego, mídia paga ou transcrições**, e o motor offline usa **heurísticas léxicas (regex e TF-IDF)** em vez de embeddings densos. Cumpra rigorosamente as regras abaixo ao interpretar o comando `youtube-seo advise`.
+
+#### 1. Regras Inegociáveis de Enquadramento (Confiança 9 a 10/10)
+* **Declaração obrigatória de teto preditivo:** Em todo parecer, deixe explícito que metadados estáticos pré-publicação (título, capa e horário) explicam **menos de 2,5% da variância de views dentro do mesmo canal** ($R^2 \le 0,025$; AUC intra-canal $\approx 0,58$). Jamais apresente tamanhos de efeito (`+25%`, `-15%`) como previsão ou promessa de views. Trate-os como **higiene de embalagem para evitar erros não-forçados**. Pauta, demanda real e retenção determinam mais de 95% do resultado.
+* **Proibição de probabilidade de viralização:** Nunca informe `"% de chance de viralizar"`. Atingir o topo global decorre da volatilidade estrutural do canal (AUC $0,744$), não de combinações de palavras ou cores.
+* **Ruptura de porte em 2 milhões de inscritos (não em 200 mil):** Trate canais `pequeno` (5k a 50k), `emergente` (50k a 200k) e `medio` (200k a 2M) sob o mesmo regime estatístico de **alta volatilidade e dependência de hits** (26 a 31 breakouts de 10x por mil vídeos). Apenas canais `grande` e `gigante` (`2M+`) contam com piso estabilizado pela base cativa.
+* **Postura ativa anti-guru:** Nunca recomende rosto gigante em close, boca aberta/expressão de choque, setas ou círculos vermelhos, saturação estourada, comprimento ideal de caracteres, formato de pergunta ou "melhor dia/horário" para ganhar alcance. Dentro do canal, o efeito desses clichês em views é **zero**. Perguntas no título (`+10,4%`) e expressões vulneráveis (`+17,9%`) servem apenas se a meta declarada for gerar **comentários**, pois engajamento e alcance são ortogonais após correção de escala ($\rho \approx 0$).
+
+#### 2. Prescrições por Nível de Confiança Empírica
+* **[Confiança 7/10] Concretude lexical e sincronia Título × Capa:**
+  * Recomende substituir substantivos vagos ou abstratos de autoajuda (`-15,4%`) por entidades concretas, fatos verificáveis ou objetos tangíveis, colocando o termo central logo no início do título (`+1,3 p.p.` na chance de Top 5%).
+  * **Desminta a proibição de repetição:** Alinhar ou repetir de 1 a 3 palavras-chave do título na capa não é punido pelo algoritmo (`+4,1%` na média). Mantenha o canto inferior direito limpo por causa do selo de duração.
+* **[Confiança 6/10] Coerência identitária vs. pivotagem:**
+  * Desviar abruptamente do tema habitual (`-10,5%` a `-14,8%` por DP) ou do padrão visual próprio do canal (`-7,4%` a `-10,9%` por DP) reduz a mediana esperada e não compra bilhete de loteria para 10x. Nota técnica: esses coeficientes têm leve sobre-estimação por centroide bilateral pendente de reprocessamento; se o criador quiser experimentar, sugira manter uma ponte temática clara ou testar em série planejada.
+* **[Confiança Máxima 5/10] Duração, Cadência e Legenda (Alerta de Endogeneidade):**
+  * **Duração:** Alerte contra vídeos abaixo de `5 min` em canais de formato longo (`-33,5%`). Faixas de `20 a 35 min` superam vídeos curtos na média intra-canal (`+25,1%`), exceto em **Tech**, onde há teto claro perto de `25 a 30 min`. **Trava obrigatória:** avise sempre que duração reflete escopo de produção; **proíba esticar roteiro ou edição artificialmente**, pois enrolação derruba a retenção. Ignore projeções entusiastas para `60+ min` em canais pequenos (base pendente de limpeza de filmes completos).
+  * **Cadência:** Desencoraje publicar vídeos longos com menos de `48h` de intervalo (`-8,8%` nos `200k+`), soltar vídeo apressado em menos de `3 dias` após um flop (`-17,8%`) ou dobrar de súbito o volume semanal (`-4,8%` contra o passado recente), salvo cobertura factual quente.
+  * **Legenda manual:** Trate o número observacional (`+28,6%`) como inflado por orçamento de vídeos-chefe e upload pós-sucesso. Recomende como boa prática de acessibilidade e retenção internacional, nunca como truque mágico de distribuição.
+
+#### 3. Como Interpretar os Blocos do `youtube-seo advise`
+O motor reescrito separa achados validados de sinais exploratórios. Conduza a leitura do parecer nesta ordem:
+1. **Grau de Confiança da Base vs. Riscos da Ideia:** O campo de confiança mede exclusivamente o tamanho amostral da célula (canais/vídeos no nicho e porte) e a força estatística das regras consultadas. Uma ideia com vários alertas em célula densa tem **alta confiança no diagnóstico de risco**; nunca confunda risco alto da pauta com baixa confiança estatística.
+2. **Bloco Principal (Alavancas Validadas, $q < 0,05$):** Contém higiene estrutural de título, intervalo e adequação de minutagem à célula empírica do porte. Priorize no máximo **2 a 3 ajustes acionáveis** para não engessar o criador em micro-otimizações que valem menos de 3% da variância.
+3. **Bloco `"Hipóteses para teste A/B"` ($0,05 \le q < 0,15$ ou sem interação por estrato):** Itens listados neste bloco (como número no título, uma palavra em CAIXA ALTA, emoji em PT, peso visual à esquerda, cor dominante verde/azul ou foto de produto em close) **jamais devem ser prescritos como regra obrigatória**. Oriente o criador a usá-los apenas como variações no recurso *"Testar e Comparar"* do YouTube Studio.
+4. **Bloco `"Limites conhecidos"` e Exemplos Similares:** Use este bloco para ancorar o ceticismo saudável. Na seção de vídeos parecidos, trate a busca como inspiração léxica de enquadramento (TF-IDF sobre subamostra indexada), nunca como benchmark exato de views.
+
+#### 4. O Que o Agente Deve Descartar ou Corrigir Manualmente
+Mesmo com o motor atualizado, o avaliador offline é puramente léxico e não compreende semântica profunda nem contexto visual real. Você **deve intervir e descartar**:
+* **Falso alerta de baixa sobreposição Título × Capa por sinônimos:** O CLI mede repetição literal de radicais. Se o título diz *"Falência Bancária"* e o texto da capa diz *"Quebra dos Bancos"*, o alinhamento semântico já é máximo; **ignore qualquer sugestão de repetir a mesma palavra**.
+* **Nuances residuais de vocabulário técnico ou nomes próprios:** Se o título usar conceitos abstratos legítimos do próprio objeto de estudo (filosofia, física teórica, macroeconomia) ancorados num caso concreto, **não mande simplificar para clichês rasos**. Se o motor lembrar sobre marcas/entidades em Tech ou Games, valide primeiro se o título já contém hardware, software ou jogo específico recente; jamais sugira inserir marca famosa sem relação direta com o conteúdo (lembrando que picos de lançamentos na base incluem tráfego pago de fabricantes).
+* **Regras descartadas que o usuário possa trazer de relatórios antigos:** Se o usuário citar documentos preliminares do projeto pedindo *pausa de 45 dias* para ganhar views, *capítulos na descrição* como alavanca de alcance ($q = 0,399$, efeito nulo), *clusters visuais* (`HDB-*`, `KM12-*`), *ângulos campeões* ou *morte do vídeo após 35 dias*, **corrija-o imediatamente** citando a `ERRATA_E_LIMITES.md`.
+
+#### 5. Advertências Finais de Segurança Operacional
+* Nunca prometa recuperação de canal via ajuste de miniatura ou título quando o problema relatado for queda crônica de impressões ou mudança de público.
+* Em nichos com poucos canais na base ($G < 20$), apresente faixas de duração como referência ampla (`20 a 35 min`), evitando cravar um minuto "ótimo" exato.
+* Lembre sempre ao criador: um título concreto e uma capa limpa apenas evitam desperdiçar um bom vídeo; eles não salvam uma pauta fraca nem sustentam os primeiros 60 segundos de retenção.
 
 ---
 
@@ -924,6 +1062,7 @@ Resumo; tabela completa em `DIVERGENCIAS.md`.
 
 Ideia e pacote
 - [ ] A ideia passa nos filtros da seção 6.1 (pacote primeiro, evidência, apelo amplo).
+- [ ] Se houver título, nicho e porte: `youtube-seo advise` (ou `idea`) rodado, e o grau de confiança e os limites da seção 17C repassados (sem CTR, impressões, retenção, origem de tráfego, transcrições).
 - [ ] Superfície principal definida (busca / Home-Sugeridos / Shorts).
 - [ ] 3 grupos de títulos (buscável, intrigante, híbrido); escolhido o da superfície.
 - [ ] Título preciso, palavras importantes primeiro, sem promessa falsa (F05, F30).

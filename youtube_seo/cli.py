@@ -1,14 +1,16 @@
-"""CLI única dos cinco módulos e do pipeline."""
+"""CLI dos cinco módulos, do pipeline e do Idea Advisor offline."""
 
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 import time
 from pathlib import Path
 from typing import Any, Callable, TextIO
 
+from youtube_seo.advisor.idea_advisor import Ideia, aconselhar, para_markdown, porte_por_inscritos
 from youtube_seo.cache import FileCache
 from youtube_seo.cliente import YouTubeClient
 from youtube_seo.gemini import MODELO_PADRAO
@@ -39,7 +41,8 @@ def _construir() -> argparse.ArgumentParser:
         description=(
             "YouTube SEO Intelligence. Caminho padrão gratuito: autocomplete público, "
             "Data API v3 só com YOUTUBE_API_KEY (cota gratuita) e visão local. "
-            "Gemini só com --gemini e GEMINI_API_KEY."
+            "Gemini só com --gemini e GEMINI_API_KEY. "
+            "advise (alias idea) avalia uma ideia de vídeo longo offline, sem API e sem rede."
         ),
     )
     sub = parser.add_subparsers(dest="comando")
@@ -87,6 +90,24 @@ def _construir() -> argparse.ArgumentParser:
     pipeline.add_argument("--baixar-miniaturas", action="store_true")
     pipeline.add_argument("--gemini", action="store_true")
     pipeline.add_argument("--gemini-model", default=MODELO_PADRAO)
+
+    advise = sub.add_parser(
+        "advise",
+        aliases=["idea"],
+        help="Idea Advisor: parecer offline de uma ideia de vídeo longo (sem API)",
+    )
+    advise.add_argument("--title", required=True)
+    advise.add_argument("--niche", required=True)
+    advise.add_argument("--lang", default="pt")
+    advise.add_argument("--tier", default=None, help="pequeno, emergente, medio, grande ou gigante")
+    advise.add_argument("--subscribers", type=int, default=None)
+    advise.add_argument("--duration-min", type=float, default=None)
+    advise.add_argument("--thumb-notes", default="")
+    advise.add_argument("--thumb-text", default=None)
+    advise.add_argument("--days-since-last", type=float, default=None)
+    advise.add_argument("--last-result", choices=["hit", "flop", "normal"], default=None)
+    advise.add_argument("--recent-titles", default=None, help="Títulos recentes separados por ||")
+    advise.add_argument("--format", choices=["markdown", "json"], default="markdown")
     return parser
 
 
@@ -202,6 +223,35 @@ def _rodar(args: argparse.Namespace, cache, quota, client, transport, env, now) 
     )
 
 
+def _parecer(args: argparse.Namespace, saida: TextIO, erro: TextIO) -> int:
+    """Parecer offline. Não abre cliente, cache nem cota."""
+    porte = args.tier or (porte_por_inscritos(args.subscribers) if args.subscribers else "pequeno")
+    recentes = [t.strip() for t in (args.recent_titles or "").split("||") if t.strip()]
+    try:
+        parecer = aconselhar(
+            Ideia(
+                titulo=args.title,
+                nicho=args.niche,
+                idioma=args.lang,
+                porte=porte,
+                duracao_min=args.duration_min,
+                thumb_notes=args.thumb_notes,
+                texto_capa=args.thumb_text,
+                dias_desde_ultimo=args.days_since_last,
+                ultimo_resultado=args.last_result,
+                titulos_recentes=recentes,
+            )
+        )
+    except ValueError as exc:
+        print(f"erro: {exc}", file=erro)
+        return 2
+    if args.format == "json":
+        saida.write(json.dumps(parecer, ensure_ascii=False, indent=2) + "\n")
+    else:
+        saida.write(para_markdown(parecer))
+    return 0
+
+
 def main(
     argv: list[str] | None = None,
     *,
@@ -223,6 +273,8 @@ def main(
     if not getattr(args, "comando", None):
         parser.print_help(saida)
         return 0
+    if args.comando in ("advise", "idea"):
+        return _parecer(args, saida, erro)
     ambiente = os.environ if env is None else env
     relogio = now or time.time
     transporte = transport or UrllibTransport()
