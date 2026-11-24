@@ -22,6 +22,9 @@ youtube-seo = "youtube_seo.cli:main"
 [tool.setuptools.packages.find]
 include = ["youtube_seo*"]
 
+[tool.setuptools.package-data]
+"youtube_seo.advisor" = ["knowledge_base.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"

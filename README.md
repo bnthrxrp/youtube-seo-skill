@@ -15,8 +15,9 @@ An agent skill (SKILL.md) for YouTube SEO and discovery, covering long-form and 
 - `DIVERGENCIAS.md`: onde praticantes e o YouTube discordam.
 - `GITHUB_SKILLS.md`: levantamento de skills parecidas.
 - `VERIFICACAO_LACUNAS.md`: vereditos das lacunas (confirmado, parcial, desmentido, sem fonte primária).
-- `estudo-10k/`: estudo próprio com 17.882 vídeos longos de 203 canais (PT e EN, 11 nichos): `RESULTADOS.md` em linguagem simples, gráficos, tabelas, dataset (`dados/dataset.parquet`), lista de canais e scripts reproduzíveis (exigem sua própria chave da YouTube Data API em `YOUTUBE_API_KEY`).
-- `youtube_seo/`: sistema **YouTube SEO Intelligence** (CLI `youtube-seo`). Cinco módulos, cota gratuita e cache local. Ver a seção abaixo. Os scripts de `estudo-10k/` não foram alterados.
+- `estudo-10k/`: estudo próprio com 17.882 vídeos longos de 203 canais de 200 mil inscritos ou mais (PT e EN, 11 nichos): `RESULTADOS.md` em linguagem simples, gráficos, tabelas, dataset (`dados/dataset.parquet`), lista de canais e scripts reproduzíveis (exigem sua própria chave da YouTube Data API em `YOUTUBE_API_KEY`).
+- `docs/research/`: laboratório que amplia esse recorte para **26.194 vídeos longos de 310 canais** (mais 107 canais de 5 mil a 200 mil inscritos, 8.312 vídeos). Relatório consolidado (`RELATORIO_FINAL_CONSOLIDADO.md`), 9 relatórios de apoio, 20 gráficos, catálogo visual, 4 pareceres de exemplo e o ranking de alavancas (`data/ranking_alavancas.csv`).
+- `youtube_seo/`: sistema **YouTube SEO Intelligence** (CLI `youtube-seo`). Cinco módulos, cota gratuita e cache local, mais o Idea Advisor offline (`youtube_seo/advisor/`). Ver a seção abaixo. Os scripts de `estudo-10k/` não foram alterados.
 
 **Instalar**
 - Claude Code: copie a pasta para `~/.claude/skills/youtube-seo/` (pessoal) ou `.claude/skills/youtube-seo/` (projeto).
@@ -53,7 +54,7 @@ Visão e OCR locais, no mesmo desenho de `estudo-10k/scripts/04b_miniaturas.py` 
 pip install -e ".[vision]"
 ```
 
-**CLI.** Cada comando grava `<modulo>.json` e `<modulo>.md` em `-o` (padrão `saida-youtube-seo/`). Cache e acumulado de cota ficam em `~/.cache/youtube-seo/` (`--cache-dir` e `--quota-file` mudam o lugar).
+**CLI.** `keywords`, `serp`, `competitors`, `titles`, `gaps` e `pipeline` gravam `<modulo>.json` e `<modulo>.md` em `-o` (padrão `saida-youtube-seo/`). Cache e acumulado de cota ficam em `~/.cache/youtube-seo/` (`--cache-dir` e `--quota-file` mudam o lugar). `advise` imprime o parecer no terminal e não abre cache nem cota.
 
 ```bash
 export YOUTUBE_API_KEY=...          # opcional; sem ela, keywords e gaps ficam no autocomplete
@@ -65,6 +66,37 @@ youtube-seo titles --imagens ./minhas-thumbs -o saida/thumbs
 youtube-seo gaps "pão caseiro" --hl pt --gl BR --max-serp 3 -o saida/gaps
 youtube-seo pipeline "pão caseiro" --hl pt --gl BR --canais UCxxxxxxxxxxxxxxxxxxxxxx -o saida/pipeline
 ```
+
+### Laboratório (26.194 vídeos, 310 canais)
+
+O estudo em `docs/research/` amplia o `estudo-10k/`. São 26.194 vídeos longos de 310 canais: 203 canais com 200 mil inscritos ou mais (17.882 vídeos) e 107 canais de 5 mil a 200 mil (8.312 vídeos), 11 nichos, português e inglês, snapshot de 23/11/2026. O relatório consolidado está em `docs/research/RELATORIO_FINAL_CONSOLIDADO.md`.
+
+Desempenho, neste laboratório, é a quantidade de views do vídeo contra a mediana do próprio canal. A base não inclui CTR, impressões, retenção, tempo de exibição, origem de tráfego, inscritos ganhos por vídeo nem transcrições. Os efeitos são associação dentro do canal (efeito fixo, intervalo de 95% e correção de Benjamini-Hochberg), não causa.
+
+Achados com sinal forte, dentro do canal:
+
+- **Duração.** Dobrar a duração soma +30,2% nos canais de 5 mil a 200 mil e +14,9% nos de 200 mil ou mais. A faixa de 20 a 45 min rende +25,1% contra 8 a 20 min do mesmo canal; menos de 5 min rende −33,5%. O ótimo médio fica em 34 min (IC 28 a 43). Tech cai depois de cerca de 30 min.
+- **Consistência.** Fugir do tema habitual custa cerca de −14,8% por desvio padrão nos canais de 5 mil a 200 mil e −10,5% nos de 200 mil ou mais. Fugir do visual habitual da capa custa −10,9% e −7,4%.
+- **Cadência.** Nos canais de 200 mil ou mais, publicar com menos de 2 dias do vídeo anterior se associa a −8,8%; lançar menos de 3 dias depois de um fracasso, a −17,8%. Nos canais de 5 mil a 200 mil, o intervalo curto fica inconclusivo (q = 0,59).
+- **Legenda enviada pelo canal.** +28,6% nos canais de 200 mil ou mais, com risco real de causalidade reversa.
+- **Título.** Vocabulário abstrato −15,4%; marca ou produto famoso em tech e games +25,5%; 1ª pessoa em inglês −11,0%.
+
+Rosto grande na capa, expressão de surpresa, seta ou círculo, saturação alta, contraste alto e horário de publicação não se sustentam dentro do canal (rosto grande chega a +30,0% na comparação ingênua entre canais e a −2,5% dentro do canal). O texto do título explica no máximo R² 0,018 fora da amostra. A ruptura de porte aparece por volta de 2 milhões de inscritos, não em 200 mil: pequeno, emergente e médio se parecem; grande e gigante concentram menos views no top 10% e geram menos anomalias de 10x.
+
+### Avaliar uma ideia de vídeo (offline)
+
+`youtube-seo advise` (alias `idea`) compara uma ideia de vídeo longo com essa base. Não chama API, não usa rede e não gasta cota. O parecer sai no terminal (markdown ou `--format json`), com diagnóstico, grau de confiança, faixa de duração, leitura do título, diretrizes de capa, cadência, exemplos reais parecidos e checklist. Ele não prevê views.
+
+```bash
+youtube-seo advise --title "5 celulares baratos que valem a pena em 2026" --niche tech --lang pt \
+  --tier pequeno --duration-min 18 --thumb-notes "fundo escuro, produto em destaque, sem rosto" --days-since-last 5
+youtube-seo idea --title "50 Geography Facts You Won't Believe" --niche educacao --lang en \
+  --subscribers 19500 --duration-min 21 --format json
+```
+
+`--tier` aceita `pequeno`, `emergente`, `medio`, `grande` ou `gigante`. Sem `--tier`, `--subscribers` define o porte (abaixo de 50 mil, pequeno; até 200 mil, emergente; até 2 milhões, médio; até 10 milhões, grande; acima, gigante). Sem os dois, o padrão é pequeno. Nichos: `culinaria`, `documentario`, `educacao`, `entretenimento`, `esportes`, `financas`, `games`, `historias`, `infantil`, `lifestyle`, `tech`.
+
+A base fica em `youtube_seo/advisor/knowledge_base.json`. `scripts/research/build_knowledge_base.py` regenera esse JSON a partir das bases do laboratório (pandas e pyarrow). As bases brutas, embeddings e miniaturas não estão neste repositório. Quatro pareceres de exemplo estão em `docs/research/advisor_examples/`.
 
 `--letras aeiou` expande o autocomplete (use `--letras abcdefghijklmnopqrstuvwxyz` para o alfabeto). `--sem-prefixos` desliga como/melhor/vs. `--sem-cache` ignora o cache. `--paginas 2` pede outra página de busca e custa mais 100 unidades por termo.
 
@@ -133,7 +165,7 @@ Pontos, quando a oferta foi medida: demanda aparente (alta 60, média 40, sement
 
 ## English
 
-**What it is.** An operational guide for titles, thumbnails, hooks, descriptions, tags, chapters, keyword research, Shorts, multi-language audio, end screens, cards, posts, live streams, A/B tests, view-drop diagnosis and publishing checklists. The skill is written in Brazilian Portuguese. Research reviewed November 2026 (133 sources; gaps checked against primary sources in v2.1). v2.2 adds an original observational study of 17,882 long-form videos from 203 channels in `estudo-10k/` (each video compared with its own channel's baseline; mixed-effects and within-channel models, Benjamini-Hochberg correction, out-of-sample validation), with thumbnails also read by a vision model (expression, gaze, arrows, style, background). Headline: all 35 metadata and thumbnail traits together explain about 1.5% of within-channel variation; channel-uploaded captions (+28%) and longer duration (+14% per doubling) are the only robust correlates.
+**What it is.** An operational guide for titles, thumbnails, hooks, descriptions, tags, chapters, keyword research, Shorts, multi-language audio, end screens, cards, posts, live streams, A/B tests, view-drop diagnosis and publishing checklists. The skill is written in Brazilian Portuguese. Research reviewed November 2026 (133 sources; gaps checked against primary sources in v2.1). v2.2 adds an original observational study of 17,882 long-form videos from 203 channels with 200k or more subscribers in `estudo-10k/` (each video compared with its own channel's baseline; mixed-effects and within-channel models, Benjamini-Hochberg correction, out-of-sample validation), with thumbnails also read by a vision model (expression, gaze, arrows, style, background). Headline of that slice: all 35 metadata and thumbnail traits together explain about 1.5% of within-channel variation; channel-uploaded captions (+28%) and longer duration (+14% per doubling) are the only robust correlates. v2.4 extends the same snapshot to **26,194 long-form videos from 310 channels** (adding 107 channels between 5k and 200k subscribers, 8,312 videos) in `docs/research/`. Within-channel associations that hold up there: duration (about +30% per doubling below 200k, +15% at 200k+), staying on the channel's usual topic and thumbnail look, a slower cadence on channels of 200k+, and channel-uploaded captions (+29%, with a real reverse-causality risk). Big-face thumbnails, surprise expressions, arrows, saturation and publish hour do not hold up inside the channel. The public dataset has no CTR, impressions, retention, watch time, traffic source, subscribers gained per video, or transcripts.
 
 **Install**
 - Claude Code: copy the folder to `~/.claude/skills/youtube-seo/` (personal) or `.claude/skills/youtube-seo/` (project).
@@ -145,7 +177,7 @@ Pontos, quando a oferta foi medida: demanda aparente (alta 60, média 40, sement
 
 ### YouTube SEO Intelligence
 
-Local CLI (`youtube-seo`) with five modules. The default path costs nothing: public autocomplete, the YouTube Data API v3 only when `YOUTUBE_API_KEY` is set (free quota), and local OpenCV/OCR if you install the `vision` extra. Gemini is off unless you pass `--gemini` and set `GEMINI_API_KEY`. No `.env` is committed. Reports are written in Portuguese; this section is the English map. The `estudo-10k/` scripts are unchanged.
+Local CLI (`youtube-seo`) with five modules plus an offline idea advisor. The default path costs nothing: public autocomplete, the YouTube Data API v3 only when `YOUTUBE_API_KEY` is set (free quota), and local OpenCV/OCR if you install the `vision` extra. Gemini is off unless you pass `--gemini` and set `GEMINI_API_KEY`. `advise` (alias `idea`) never calls the network. No `.env` is committed. Reports are written in Portuguese; this section is the English map. The `estudo-10k/` scripts are unchanged.
 
 **Install and test**
 
@@ -157,7 +189,7 @@ pytest
 pip install -e ".[vision]"   # optional local thumbnails
 ```
 
-**Commands.** Each one writes `<module>.json` and `<module>.md`. Cache and the daily quota ledger live in `~/.cache/youtube-seo/`.
+**Commands.** `keywords`, `serp`, `competitors`, `titles`, `gaps` and `pipeline` each write `<module>.json` and `<module>.md`. Cache and the daily quota ledger live in `~/.cache/youtube-seo/`. `advise` prints to the terminal and does not open the cache or the quota ledger.
 
 ```bash
 export YOUTUBE_API_KEY=...
@@ -168,7 +200,13 @@ youtube-seo titles --termo "sourdough" --hl en --gl US -o out/titles
 youtube-seo titles --imagens ./thumbs -o out/thumbs
 youtube-seo gaps "sourdough" --hl en --gl US --max-serp 3 -o out/gaps
 youtube-seo pipeline "sourdough" --hl en --gl US --canais UCxxxxxxxxxxxxxxxxxxxxxx -o out/all
+youtube-seo advise --title "5 cheap phones that are actually worth it in 2026" --niche tech --lang en \
+  --tier pequeno --duration-min 18 --thumb-notes "dark background, product in frame, no face" --days-since-last 5
+youtube-seo idea --title "50 Geography Facts You Won't Believe" --niche educacao --lang en \
+  --subscribers 19500 --duration-min 21 --format json
 ```
+
+`advise` / `idea` prints a markdown opinion to the terminal (`--format json` for the raw object). It does not write the `-o` folder and it does not spend quota. Pass `--tier` (`pequeno`, `emergente`, `medio`, `grande`, `gigante`) or `--subscribers`. Niches: `culinaria`, `documentario`, `educacao`, `entretenimento`, `esportes`, `financas`, `games`, `historias`, `infantil`, `lifestyle`, `tech`. The bundled base is `youtube_seo/advisor/knowledge_base.json` (packaged via `[tool.setuptools.package-data]`). `scripts/research/build_knowledge_base.py` rebuilds it from the lab parquets, which are not in this repository. The opinion states its confidence and the hard limits: no CTR, impressions, retention, traffic source, or transcripts, and no view prediction. Full write-up: `docs/research/RELATORIO_FINAL_CONSOLIDADO.md`.
 
 `--letras aeiou` expands autocomplete; `--letras abcdefghijklmnopqrstuvwxyz` walks the alphabet. `--sem-prefixos` skips how-to/best/vs prefixes. `--paginas 2` requests another search page (another 100 units per term). `--sem-cache` bypasses the cache.
 
