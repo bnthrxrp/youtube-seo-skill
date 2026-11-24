@@ -242,3 +242,7 @@ One cold SERP is about **102** units. Ten uncached terms are 1,000 units of `sea
 ## License
 
 MIT, see `LICENSE`. Third-party inspirations in `ATTRIBUTIONS.md`. Not affiliated with Google or YouTube.
+
+## Auditoria e errata (v2.5)
+
+O laboratório de `docs/research/` passou por auditoria sênior. A errata formal está em `docs/research/ERRATA_E_LIMITES.md` (17 itens, com o que foi corrigido no motor e o que segue pendente de reprocessamento dos dados brutos). O ranking vigente é `docs/research/data/ranking_alavancas_revisado.csv`. O `youtube-seo advise` só trata como recomendação o que tem q < 0,05 com IC válido, e mostra o restante como hipótese para teste A/B.

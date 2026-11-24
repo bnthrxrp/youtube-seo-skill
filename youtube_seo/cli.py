@@ -94,7 +94,6 @@ def _construir() -> argparse.ArgumentParser:
     advise = sub.add_parser(
         "advise",
         aliases=["idea"],
-        parents=[comum],
         help="Idea Advisor: parecer offline de uma ideia de vídeo longo (sem API)",
     )
     advise.add_argument("--title", required=True)

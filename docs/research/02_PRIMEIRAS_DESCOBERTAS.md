@@ -1,3 +1,11 @@
+> **AVISO DE AUDITORIA E GOVERNANÇA ESTATÍSTICA (ERRATA ATIVA):**
+> Este relatório contém estimativas geradas antes do fechamento da auditoria metodológica sênior. Ao consultar este material, aplique obrigatoriamente as seguintes travas:
+> 1. **Teto preditivo:** Metadados estáticos (título, capa e horário) explicam menos de 2,5% da variância intra-canal ($R^2 \le 0,025$). Nenhum coeficiente deve ser lido como garantia causal de alcance.
+> 2. **Recomendações firmes vs. Hipóteses A/B:** Como **recomendação prescritiva firme** (`faixa = validada` em `docs/research/data/ranking_alavancas_revisado.csv`), valem exclusivamente itens com $q < 0,05$, IC 95% limpo sem cruzar zero e penalização de endogeneidade. Itens na zona $0,05 \le q < 0,15$ (ou rebaixados por limites da base bruta) pertencem à faixa `hipotese_ab`: **hipótese A/B não é recomendação**, servindo apenas para experimentação controlada no *Testar e Comparar* do YouTube Studio. Ignore integralmente clusters visuais (`HDB-*`, `KM12-*`), ângulos de vídeo e qualquer item com $q \ge 0,15$ (`faixa = removida`).
+> 3. **Reconciliações e pendências:** Em caso de conflito sobre alinhamento Capa × Título ou Momentum pós-hit, ou para verificar variáveis marcadas como `PENDENTE DE REPROCESSAMENTO` (vazamento temporal residual, filtro de canais pequenos e denominador de idade), prevalece o disposto em `docs/research/ERRATA_E_LIMITES.md`.
+
+---
+
 # 02 · Primeiras descobertas (Fase 1)
 
 Gerado por `scripts/02_primeiras_descobertas.py` (cálculo, cerca de 4 min), `scripts/03_anomalias_classificacao.py` (classificação de tema das anomalias), `scripts/04_grafico_topo.py` (gráfico 03) e `scripts/05_sintese_llm.py` (revisão crítica). Números completos em `resultados/primeiras_descobertas.json` e `resultados/02_*.csv` / `03_*.csv`.
